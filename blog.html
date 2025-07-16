@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Braces & Roots - Premium Dental Care</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baskervville:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        poppins: ["Poppins", "sans-serif"],
+                        baskervville: ["Baskervville", "serif"],
+                    },
+                    colors: {
+                        primary: "#3b82f6",
+                        secondary: "#1e40af",
+                    },
+                },
+            },
+        };
+    </script>
+    <!-- Scroll JS -->
+    <script>
+        function scrollTestimonials(direction) {
+            const slider = document.getElementById("testimonialSlider");
+            const scrollAmount = 320; // Approx one card width + gap
+            slider.scrollBy({ left: direction * scrollAmount, behavior: "smooth" });
+        }
+    </script>
+
+    <!-- Hide scrollbar (optional CSS if not using Tailwind plugin) -->
+    <style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+    <style>
+        .hero-image {
+
+            background-image: url("/smile-gallery-img/1.png");
+            background-size: contain;
+
+
+
+
+        }
+
+        .appointment-bg {
+            background-image: url("/homepage-img/testimonial-1.png");
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .appointment-bg::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+
+        .appointment-content {
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+</head>
+
+<body class="text-gray-800">
+    <!-- Header/Navigation -->
+   <header class="sticky top-0 z-50 bg-white border-b border-gray-200 px-4 w-full">
+    <div class="container mx-auto flex justify-between items-center h-[105px]">
+
+      <!-- Logo -->
+      <a href="/index.html" class="flex items-center">
+        <div class="w-[155px] h-[53px] flex items-center justify-center overflow-hidden">
+          <img src="/homepage-img/yellow-logo.png" alt="Braces & Roots Logo" class="object-contain h-full" />
+        </div>
+      </a>
+
+      <!-- Hamburger Button (Mobile) -->
+      <button id="menu-btn" class="md:hidden text-[#1A1A1A] focus:outline-none" aria-label="Toggle Menu">
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2"
+          viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex items-center gap-6">
+        <a href="#" class="text-[#1A1A1A] font-medium font-roboto flex items-center gap-1">
+          Treatments
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"
+            viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 9l-7 7-7-7" />
+          </svg>
+        </a>
+        <a href="/technologypage.html" class="text-[#1A1A1A] font-medium font-roboto">Technology</a>
+        <a href="/internationalpage.html" class="text-[#1A1A1A] font-medium font-roboto">International Patients</a>
+        <a href="/smile-transformation.html" class="text-[#1A1A1A] font-medium font-roboto">Smile Gallery</a>
+        <a href="/aboutus.html" class="text-[#1A1A1A] font-medium font-roboto">About Us</a>
+        <a href="/contactpage.html" class="text-[#1A1A1A] font-medium font-roboto">Contact</a>
+      </nav>
+
+      <!-- Call to Action (Desktop) -->
+      <div class="hidden md:flex items-center">
+        <a href="tel:+1234567890"
+          class="h-[48px] w-[98px] flex items-center justify-center bg-[#1E1C01] text-[#D8C119] font-medium font-roboto">
+          Call us
+        </a>
+      </div>
+    </div>
+
+    <!-- Mobile Menu (hidden by default) -->
+    <div id="mobile-menu" class="md:hidden hidden border-t border-gray-200 bg-white px-4 pb-6">
+      <nav class="flex flex-col gap-4 mt-4">
+        <a href="#" class="text-[#1A1A1A] font-medium font-roboto flex items-center gap-1">
+          Treatments
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"
+            viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 9l-7 7-7-7" />
+          </svg>
+        </a>
+        <a href="/technologypage.html" class="text-[#1A1A1A] font-medium font-roboto">Technology</a>
+        <a href="/internationalpage.html" class="text-[#1A1A1A] font-medium font-roboto">International Patients</a>
+        <a href="/smile-transformation.html" class="text-[#1A1A1A] font-medium font-roboto">Smile Gallery</a>
+        <a href="/aboutus.html" class="text-[#1A1A1A] font-medium font-roboto">About Us</a>
+        <a href="/contactpage.html" class="text-[#1A1A1A] font-medium font-roboto">Contact</a>
+        <a href="tel:+1234567890"
+          class="mt-4 h-[48px] w-full flex items-center justify-center bg-[#1E1C01] text-[#D8C119] font-medium font-roboto">
+          Call us
+        </a>
+      </nav>
+    </div>
+  </header>
+
+
+    
+  <!-- JS for Mobile Menu Toggle -->
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+
+   <!-- Blog Section -->
+    <section class="py-16 bg-white">
+  <div class="container mx-auto px-4">
+    <!-- Section Heading -->
+    <div class="text-center max-w-4xl mx-auto mb-16 gap-24 ">
+            <h2 class="text-[56px] font-bold mb-4 font-baskervville">
+               Insights from the Experts
+            </h2>
+            <p class="text-[18px] font-medium font-roboto">
+               Stay informed with expert tips, case stories, and the latest in dental innovation.
+            </p>
+        </div>
+
+
+    <!-- Blog Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 mt-16">
+      
+      <!-- Card Start -->
+      <div class="bg-white">
+        <img src="/blog-img/blog1.png" alt="Aligner" class="w-full aspect-video w-full object-cover " />
+        <h3 class="mt-4 text-[22px] font-bold font-baskervville">The Truth About Invisible Braces: What Most Patients Don’t Know</h3>
+        <p class="text-[16px] font-regular font-roboto mt-2">
+          Discover how aligners like Invisalign work, who they’re for, and why results vary from case to case.
+        </p>
+        <div class="mt-4 flex items-center ">
+          <div class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center font-bold mr-2">
+            <img src="/doctor-img/dr-wahab.png" alt="Dr. Wahab" class="w-full h-full rounded-full object-cover" />
+          </div>
+          <div class="ml-4">
+            <p class="font-bold text-[14px] font-baskervville">Dr. Wahab</p>
+            <p class="text-[14px] font-regular font-roboto">June 18, 2025</p>
+          </div>
+        </div>
+      </div>
+      <!-- Card End -->
+
+      <!-- Card 2 -->
+      <div class="bg-white">
+        <img src="/blog-img/blog2.png" alt="Root Canal"class="w-full aspect-video w-full object-cover " />
+        <h3 class="mt-4 text-[22px] font-bold font-baskervville">Saving Smiles: When Root Canals Are the Real Hero</h3>
+        <p class="text-[16px] font-regular font-roboto mt-2">
+          Microscope-assisted root canals aren’t just pain-free — they’re redefining success rates for...
+        </p>
+        <div class="mt-4 flex items-center ">
+           <div class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center font-bold mr-2">
+            <img src="/doctor-img/dr-sumiya.png" alt="Dr. Sumaiya" class="w-full h-full rounded-full object-cover" />
+          </div>
+          <div class="ml-4">
+            <p class="font-bold text-[14px] font-baskervville">Dr. Sumaiya</p>
+            <p class="text-[14px] font-regular font-roboto">June 12, 2025</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-white">
+        <img src="/blog-img/blog3.png" alt="Full Mouth Rehab" class="w-full aspect-video w-full object-cover "/>
+        <h3 class="mt-4 text-[22px] font-bold font-baskervville">Full-Mouth Rehabilitation: Who Really Needs It?</h3>
+        <p class="text-[16px] font-regular font-roboto mt-2">
+          Microscope-assisted root canals aren’t just pain-free — they’re redefining success rates for...
+        </p>
+        <div class="mt-4 flex items-center ">
+          <div class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center font-bold mr-2">
+            <img src="/doctor-img/dr-sumiya.png" alt="Dr. Sumaiya" class="w-full h-full rounded-full object-cover" />
+          </div>
+          <div class="ml-4">
+            <p class="font-bold text-[14px] font-baskervville">Dr. Sumaiya</p>
+            <p class="text-[14px] font-regular font-roboto">June 12, 2025</p>
+          </div>
+        </div>
+      </div>
+
+        <!-- Card 4 -->
+      <div class="bg-white">
+        <img src="/blog-img/blog1.png" alt="Aligner" class="w-full aspect-video w-full object-cover " />
+        <h3 class="mt-4 text-[22px] font-bold font-baskervville">The Truth About Invisible Braces: What Most Patients Don’t Know</h3>
+        <p class="text-[16px] font-regular font-roboto mt-2">
+          Discover how aligners like Invisalign work, who they’re for, and why results vary from case to case.
+        </p>
+        <div class="mt-4 flex items-center ">
+          <div class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center font-bold mr-2">
+            <img src="/doctor-img/dr-wahab.png" alt="Dr. Wahab" class="w-full h-full rounded-full object-cover" />
+          </div>
+          <div class="ml-4">
+            <p class="font-bold text-[14px] font-baskervville">Dr. Wahab</p>
+            <p class="text-[14px] font-regular font-roboto">June 18, 2025</p>
+          </div>
+        </div>
+      </div>
+      <!-- Card End -->
+
+      <!-- Card 5 -->
+      <div class="bg-white">
+        <img src="/blog-img/blog2.png" alt="Root Canal"class="w-full aspect-video w-full object-cover " />
+        <h3 class="mt-4 text-[22px] font-bold font-baskervville">Saving Smiles: When Root Canals Are the Real Hero</h3>
+        <p class="text-[16px] font-regular font-roboto mt-2">
+          Microscope-assisted root canals aren’t just pain-free — they’re redefining success rates for...
+        </p>
+        <div class="mt-4 flex items-center ">
+           <div class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center font-bold mr-2">
+            <img src="/doctor-img/dr-sumiya.png" alt="Dr. Sumaiya" class="w-full h-full rounded-full object-cover" />
+          </div>
+          <div class="ml-4">
+            <p class="font-bold text-[14px] font-baskervville">Dr. Sumaiya</p>
+            <p class="text-[14px] font-regular font-roboto">June 12, 2025</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="bg-white">
+        <img src="/blog-img/blog3.png" alt="Full Mouth Rehab" class="w-full aspect-video w-full object-cover "/>
+        <h3 class="mt-4 text-[22px] font-bold font-baskervville">Full-Mouth Rehabilitation: Who Really Needs It?</h3>
+        <p class="text-[16px] font-regular font-roboto mt-2">
+          Microscope-assisted root canals aren’t just pain-free — they’re redefining success rates for...
+        </p>
+        <div class="mt-4 flex items-center ">
+          <div class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center font-bold mr-2">
+            <img src="/doctor-img/dr-sumiya.png" alt="Dr. Sumaiya" class="w-full h-full rounded-full object-cover" />
+          </div>
+          <div class="ml-4">
+            <p class="font-bold text-[14px] font-baskervville">Dr. Sumaiya</p>
+            <p class="text-[14px] font-regular font-roboto">June 12, 2025</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- CTA Section -->
+    <section
+        class="relative bg-cover bg-center bg-no-repeat text-white  px-6 md:px-16 lg:px-24 py-24 md:py-28 lg:py-32"
+        style="background-image: url('/blog-img/bottom-img.png'); min-height: 620px;">
+        <!-- Black overlay -->
+        <div class="absolute inset-0 bg-[#1E1C01] opacity-60 z-0"></div>
+
+        <!-- Content -->
+        <div class="relative z-10 text-center container mx-auto mt-12">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-baskervville font-semibold  leading-tight">
+               Ready to take the next step in your dental journey? <br>Let’s make it happen.
+            </h2>
+
+            <!-- Button -->
+            <div class="mt-12">
+                <a href="#book"
+                    class="bg-[#D8C119] text-[#1E1C01] font-medium py-3 px-6 md:px-8 text-base md:text-lg font-roboto hover:bg-yellow-400 transition duration-300">
+                    Book an Appointment
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="bg-[#1A1A1A] text-white py-24">
+        <div class="container mx-auto px-4">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                    <!-- Logo & Address -->
+                    <div>
+                        <a href="/" class="mb-4 inline-block">
+                            <img src="/homepage-img/yellow-logo-ffoter.png" alt="Braces & Roots Logo" class="h-12" />
+                        </a>
+                        <div class="mt-4">
+                            <p class="font-semibold">Hyderabad Address:</p>
+                            <p>Hyderabad (Jubilee Hills)</p>
+                            <p>+91-XXXXXXXXXX</p>
+                            <p>Mon–Sat: 10 AM – 8 PM</p>
+                        </div>
+                        <div class="mt-4">
+                            <p class="font-semibold">Kurnool Address:</p>
+                            <p>Kurnool (Ashok Nagar)</p>
+                            <p>+91-XXXXXXXXXX</p>
+                            <p>Mon–Sat: 10 AM – 7 PM</p>
+                        </div>
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                        <ul class="space-y-2">
+                            <li>
+                                <a href="index.html" class="hover:text-[#D8C119] transition duration-300">Home</a>
+                            </li>
+                            <li>
+                                <a href="aboutus.html" class="hover:text-[#D8C119] transition duration-300">About Us</a>
+                            </li>
+                            <li>
+                                <a href="smile-transformation.html" class="hover:text-[#D8C119] transition duration-300">Smile Gallery</a>
+                            </li>
+                            <li>
+                                <a href="internationalpage.html" class="hover:text-[#D8C119] transition duration-300">International
+                                    Patients</a>
+                            </li>
+                            <li>
+                                <a href="blog.html" class="hover:text-[#D8C119] transition duration-300">Blog</a>
+                            </li>
+                            <li>
+                                <a href="contactpage.html" class="hover:text-[#D8C119] transition duration-300">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Column Two -->
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Column Two</h4>
+                        <ul class="space-y-2">
+                            <li>
+                                <a href="#" class="hover:text-[#D8C119] transition duration-300">Same-Day Crowns</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:text-[#D8C119] transition duration-300">Smile Makeovers</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:text-[#D8C119] transition duration-300">Root Canal</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:text-[#D8C119] transition duration-300">Dental Implants</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:text-[#D8C119] transition duration-300">Full Mouth Rehab</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:text-[#D8C119] transition duration-300">CBCT & Oral Cancer
+                                    Screening</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Bottom Footer -->
+                <div class="border-t border-gray-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                    <p>© 2025 Braces & Roots. All rights reserved.</p>
+
+                    <div class="flex gap-2 mt-4 md:mt-0">
+                        <a href="#" class="hover:text-[#D8C119] transition duration-300 underline">Privacy Policy</a>
+                        <a href="#" class="hover:text-[#D8C119] transition duration-300 underline">Terms of Service</a>
+                    </div>
+
+                    <div class="flex gap-4 mt-4 md:mt-0 text-xl text-white">
+                        <a href="#" aria-label="Facebook" class="hover:text-[#D8C119] transition duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" aria-label="Instagram" class="hover:text-[#D8C119] transition duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" aria-label="X" class="hover:text-[#D8C119] transition duration-300">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" aria-label="LinkedIn" class="hover:text-[#D8C119] transition duration-300">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" aria-label="YouTube" class="hover:text-[#D8C119] transition duration-300">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+</body>
+
+</html>
