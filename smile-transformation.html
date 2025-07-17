@@ -2,636 +2,685 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Braces & Roots - Premium Dental Care</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Braces & Roots - Premium Dental Care</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Baskervville:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet" />
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        poppins: ["Poppins", "sans-serif"],
-                        baskervville: ["Baskervville", "serif"],
-                    },
-                    colors: {
-                        primary: "#3b82f6",
-                        secondary: "#1e40af",
-                    },
-                },
-            },
-        };
-    </script>
-    <!-- Scroll JS -->
-    <script>
-        function scrollTestimonials(direction) {
-            const slider = document.getElementById("testimonialSlider");
-            const scrollAmount = 320; // Approx one card width + gap
-            slider.scrollBy({ left: direction * scrollAmount, behavior: "smooth" });
-        }
-    </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Baskervville:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            roboto: ["Roboto"],
+            baskervville: ["Baskervville"],
+          },
+          screens: {
+            'xl2': '1230px', // custom breakpoint
+          },
+          colors: {
+            primary: "#3b82f6",
+            secondary: "#1e40af",
+          },
+        },
+      },
+    };
+  </script>
+  <!-- Scroll JS -->
+  <script>
+    function scrollTestimonials(direction) {
+      const slider = document.getElementById("testimonialSlider");
+      const scrollAmount = 320; // Approx one card width + gap
+      slider.scrollBy({ left: direction * scrollAmount, behavior: "smooth" });
+    }
+  </script>
 
-    <!-- Hide scrollbar (optional CSS if not using Tailwind plugin) -->
-    <style>
-        .no-scrollbar::-webkit-scrollbar {
-            display: none;
-        }
+  <!-- Hide scrollbar (optional CSS if not using Tailwind plugin) -->
+  <style>
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
 
-        .no-scrollbar {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
-    </style>
-    <style>
-        .hero-image {
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+  <style>
+    .hero-image {
 
-            background-image: url("/smile-gallery-img/1.png");
-            background-size: contain;
-
-
+      background-image: url("/smile-gallery-img/1.png");
+      background-size: contain;
 
 
-        }
 
-        .appointment-bg {
-            background-image: url("/homepage-img/testimonial-1.png");
-            background-size: cover;
-            background-position: center;
-            position: relative;
-        }
 
-        .appointment-bg::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: rgba(255, 255, 255, 0.9);
-        }
+    }
 
-        .appointment-content {
-            position: relative;
-            z-index: 1;
-        }
-    </style>
+    .appointment-bg {
+      background-image: url("/homepage-img/testimonial-1.png");
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+
+    .appointment-bg::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(255, 255, 255, 0.9);
+    }
+
+    .appointment-content {
+      position: relative;
+      z-index: 1;
+    }
+  </style>
 </head>
 
 <body class="text-gray-800">
-    <!-- Header/Navigation -->
-    <header class="sticky top-0 z-50 bg-white border-b border-gray-200 px-4 w-full">
-    <div class="container mx-auto flex justify-between items-center h-[105px]">
+<!-- Header -->
+<header class="sticky top-0 z-50 bg-white border-b border-gray-200 w-full">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-16 flex justify-between items-center h-auto m-2 md:m-4">
 
-      <!-- Logo -->
-      <a href="/index.html" class="flex items-center">
-        <div class="w-[155px] h-[53px] flex items-center justify-center overflow-hidden">
-          <img src="/homepage-img/yellow-logo.png" alt="Braces & Roots Logo" class="object-contain h-full" />
-        </div>
-      </a>
+    <!-- Logo -->
+    <a href="/" class="flex items-center">
+      <div class="md:w-[155px] md:h-[53px] w-[100px] h-[35px] flex items-center justify-center overflow-hidden">
+        <img src="/homepage-img/yellow-logo.png" alt="Braces & Roots Logo" class="object-contain h-full" />
+      </div>
+    </a>
 
-      <!-- Hamburger Button (Mobile) -->
-      <button id="menu-btn" class="md:hidden text-[#1A1A1A] focus:outline-none" aria-label="Toggle Menu">
-        <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2"
-          viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-      </button>
+    <!-- Hamburger Button -->
+    <button id="menu-btn" class="xl2:hidden text-[#1A1A1A] focus:outline-none" aria-label="Toggle menu">
+      <!-- Hamburger Icon -->
+      <svg id="icon-hamburger" class="w-7 h-7 block" fill="none" stroke="currentColor" stroke-width="2"
+        viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+      <!-- Close Icon -->
+      <svg id="icon-close" class="w-7 h-7 hidden" fill="none" stroke="currentColor" stroke-width="2"
+        viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
 
       <!-- Desktop Navigation -->
-      <nav class="hidden md:flex items-center gap-6">
-        <a href="#" class="text-[#1A1A1A] font-medium font-roboto flex items-center gap-1">
+      <nav class="hidden xl2:flex items-center gap-6">
+        <a href="/service.html"
+          class="text-[#1A1A1A] font-medium font-roboto hover:text-[#D8C119] flex items-center gap-1">
           Treatments
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"
-            viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+            stroke-linecap="round" stroke-linejoin="round">
             <path d="M19 9l-7 7-7-7" />
           </svg>
         </a>
-        <a href="/technologypage.html" class="text-[#1A1A1A] font-medium font-roboto">Technology</a>
-        <a href="/internationalpage.html" class="text-[#1A1A1A] font-medium font-roboto">International Patients</a>
-        <a href="/smile-transformation.html" class="text-[#1A1A1A] font-medium font-roboto">Smile Gallery</a>
-        <a href="/aboutus.html" class="text-[#1A1A1A] font-medium font-roboto">About Us</a>
-        <a href="/contactpage.html" class="text-[#1A1A1A] font-medium font-roboto">Contact</a>
+        <a href="/technologypage.html"
+          class="text-[#1A1A1A] font-medium font-roboto hover:text-[#D8C119]">Technology</a>
+        <a href="/internationalpage.html"
+          class="text-[#1A1A1A] font-medium font-roboto hover:text-[#D8C119]">International Patients</a>
+        <a href="/smile-transformation.html" class="text-[#1A1A1A] font-medium font-roboto hover:text-[#D8C119]">Smile
+          Gallery</a>
+        <a href="/aboutus.html" class="text-[#1A1A1A] font-medium font-roboto hover:text-[#D8C119]">About Us</a>
+        <a href="/contactpage.html" class="text-[#1A1A1A] font-medium font-roboto hover:text-[#D8C119]">Contact</a>
       </nav>
 
-      <!-- Call to Action (Desktop) -->
-      <div class="hidden md:flex items-center">
-        <a href="tel:+1234567890"
-          class="h-[48px] w-[98px] flex items-center justify-center bg-[#1E1C01] text-[#D8C119] font-medium font-roboto">
-          Call us
-        </a>
-      </div>
+      <!-- Desktop Call to Action -->
+        <div class="hidden xl2:flex items-center">
+      <a href="tel:+1234567890"
+        class="h-[48px] w-[98px] flex items-center justify-center bg-[#1E1C01] text-[#D8C119] hover:bg-[#D8C119] hover:text-[#1E1C01] font-medium font-roboto">
+        Call us
+      </a>
     </div>
-
-    <!-- Mobile Menu (hidden by default) -->
-    <div id="mobile-menu" class="md:hidden hidden border-t border-gray-200 bg-white px-4 pb-6">
-      <nav class="flex flex-col gap-4 mt-4">
-        <a href="#" class="text-[#1A1A1A] font-medium font-roboto flex items-center gap-1">
+  </div>
+    <!-- Mobile Navigation -->
+     <div id="mobile-menu"
+    class="xl2:hidden hidden border-t border-gray-200 bg-white px-4 pb-6 transition-all duration-300 ease-in-out">
+    <nav class="flex flex-col gap-4 mt-4">
+        <a href="/service.html"
+          class="text-[#1A1A1A] font-medium font-roboto hover:text-[#D8C119] flex items-center gap-1">
           Treatments
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"
-            viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+            stroke-linecap="round" stroke-linejoin="round">
             <path d="M19 9l-7 7-7-7" />
           </svg>
         </a>
-        <a href="/technologypage.html" class="text-[#1A1A1A] font-medium font-roboto">Technology</a>
-        <a href="/internationalpage.html" class="text-[#1A1A1A] font-medium font-roboto">International Patients</a>
-        <a href="/smile-transformation.html" class="text-[#1A1A1A] font-medium font-roboto">Smile Gallery</a>
-        <a href="/aboutus.html" class="text-[#1A1A1A] font-medium font-roboto">About Us</a>
-        <a href="/contactpage.html" class="text-[#1A1A1A] font-medium font-roboto">Contact</a>
+        <a href="/technologypage.html"
+          class="text-[#1A1A1A] font-medium font-roboto hover:text-[#D8C119]">Technology</a>
+        <a href="/internationalpage.html"
+          class="text-[#1A1A1A] font-medium font-roboto hover:text-[#D8C119]">International Patients</a>
+        <a href="/smile-transformation.html" class="text-[#1A1A1A] font-medium font-roboto hover:text-[#D8C119]">Smile
+          Gallery</a>
+        <a href="/aboutus.html" class="text-[#1A1A1A] font-medium font-roboto hover:text-[#D8C119]">About Us</a>
+        <a href="/contactpage.html" class="text-[#1A1A1A] font-medium font-roboto hover:text-[#D8C119]">Contact</a>
         <a href="tel:+1234567890"
-          class="mt-4 h-[48px] w-full flex items-center justify-center bg-[#1E1C01] text-[#D8C119] font-medium font-roboto">
+          class="mt-4 h-12 w-[150px] flex items-center justify-center bg-[#1E1C01] text-[#D8C119] hover:bg-[#D8C119] hover:text-[#1E1C01] font-medium font-roboto text-base">
           Call us
         </a>
+
       </nav>
     </div>
   </header>
 
-
-    
   <!-- JS for Mobile Menu Toggle -->
-  <script>
-    const menuBtn = document.getElementById('menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-
-    menuBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
-  </script>
-
-    <!-- Hero Section -->
-    <section class="w-full bg-white text-white mb-24 relative">
-        <!-- Background image filling the section -->
-        <div class="relative w-full h-[780px]">
-            <img src="/smile-gallery-img/1.png" alt="Clinic Interior" class="w-full h-full object-cover" />
-
-
-            <!-- Yellow Call-to-Action Banner -->
-            <div class="w-full bg-[#D8C119] py-4 text-center">
-                <h3 class="text-black text-xl font-semibold">
-                    Every Smile Has a Story. Let&apos;s Start Yours.
-                    <a href="#book" class="underline font-medium">Book Your Smile Consultation</a>
-                </h3>
-            </div>
-    </section>
-
-
-    <!-- Before Meet After Section -->
-
-    <section class="w-full bg-white text-black py-16 px-4 md:px-10">
-        <!-- Heading -->
-        <div class="text-center max-w-4xl mx-auto mb-16 gap-24 ">
-            <h2 class="text-3xl md:text-5xl font-bold mb-4 font-baskervville">
-                Before Meets After.<br />
-                This Is What Possibility Looks Like.
-            </h2>
-            <p class="text-[18px] font-medium font-roboto">
-                Explore real patient journeys — from uncertainty to confidence, from hiding their smile to lighting up
-                the
-                room. All crafted with precision, care, and innovation at Braces & Roots.
-            </p>
-        </div>
-
-        <!-- Patient smile gallery -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 container mx-auto">
-  <!-- Smile Card Template - Repeat as needed -->
-  <div class="text-start">
-    <div class="slider relative max-w-4xl aspect-video mx-auto overflow-hidden cursor-ew-resize select-none">
-      <!-- AFTER image (full background) -->
-      <img src="/smile-gallery-img/smile-scan.png" alt="After Image"
-        class="absolute inset-0 w-full h-full object-cover z-0" />
-
-      <!-- BEFORE image (clipped wrapper at 50%) -->
-      <div class="beforeWrapper absolute inset-0 overflow-hidden z-10" style="width: 50%;">
-        <img src="/smile-gallery-img/smile.png" alt="Before Image"
-          class="absolute top-0 left-0 w-full h-full object-cover pointer-events-none" />
-      </div>
-
-      <!-- Divider line -->
-      <div class="divider absolute top-0 bottom-0 left-1/2 w-[2px] bg-white z-20 -translate-x-1/2"></div>
-
-      <!-- Draggable Handle -->
-      <div class="handle absolute top-1/2 left-1/2 w-8 h-8 bg-white border border-black rounded-full z-30 -translate-x-1/2 -translate-y-1/2 shadow-md pointer-events-none"></div>
-
-    </div>
-    <!-- Text Content -->
-    <h4 class="font-baskervville text-[18px] mt-4 font-semibold">Patient Name</h4>
-    <p class="font-roboto text-[14px] mt-1 font-regular">
-      Teeth whitening is a popular aesthetic procedure. It can boost your confidence, and the process doesn’t take long.
-    </p>
-  </div>
-
-
-            <!-- Smile Card 2 -->
-          <div class="text-start">
-    <div class="slider relative max-w-4xl aspect-video mx-auto overflow-hidden cursor-ew-resize select-none">
-      <!-- AFTER image (full background) -->
-      <img src="/smile-gallery-img/smile-scan.png" alt="After Image"
-        class="absolute inset-0 w-full h-full object-cover z-0" />
-
-      <!-- BEFORE image (clipped wrapper at 50%) -->
-      <div class="beforeWrapper absolute inset-0 overflow-hidden z-10" style="width: 50%;">
-        <img src="/smile-gallery-img/smile.png" alt="Before Image"
-          class="absolute top-0 left-0 w-full h-full object-cover pointer-events-none" />
-      </div>
-
-      <!-- Divider line -->
-      <div class="divider absolute top-0 bottom-0 left-1/2 w-[2px] bg-white z-20 -translate-x-1/2"></div>
-
-      <!-- Draggable Handle -->
-      <div class="handle absolute top-1/2 left-1/2 w-8 h-8 bg-white border border-black rounded-full z-30 -translate-x-1/2 -translate-y-1/2 shadow-md pointer-events-none"></div>
-
-     
-    </div>
-    <!-- Text Content -->
-    <h4 class="font-baskervville text-[18px] mt-4 font-semibold">Patient Name</h4>
-    <p class="font-roboto text-[14px] mt-1 font-regular">
-      Teeth whitening is a popular aesthetic procedure. It can boost your confidence, and the process doesn’t take long.
-    </p>
-  </div>
-            <!-- Smile Card 3 -->
-                 <div class="text-start">
-    <div class="slider relative max-w-4xl aspect-video mx-auto overflow-hidden cursor-ew-resize select-none">
-      <!-- AFTER image (full background) -->
-      <img src="/smile-gallery-img/smile-scan.png" alt="After Image"
-        class="absolute inset-0 w-full h-full object-cover z-0" />
-
-      <!-- BEFORE image (clipped wrapper at 50%) -->
-      <div class="beforeWrapper absolute inset-0 overflow-hidden z-10" style="width: 50%;">
-        <img src="/smile-gallery-img/smile.png" alt="Before Image"
-          class="absolute top-0 left-0 w-full h-full object-cover pointer-events-none" />
-      </div>
-
-      <!-- Divider line -->
-      <div class="divider absolute top-0 bottom-0 left-1/2 w-[2px] bg-white z-20 -translate-x-1/2"></div>
-
-      <!-- Draggable Handle -->
-      <div class="handle absolute top-1/2 left-1/2 w-8 h-8 bg-white border border-black rounded-full z-30 -translate-x-1/2 -translate-y-1/2 shadow-md pointer-events-none"></div>
-an>
-    </div>
-    <!-- Text Content -->
-    <h4 class="font-baskervville text-[18px] mt-4 font-semibold">Patient Name</h4>
-    <p class="font-roboto text-[14px] mt-1 font-regular">
-      Teeth whitening is a popular aesthetic procedure. It can boost your confidence, and the process doesn’t take long.
-    </p>
-  </div>
-
-            <!-- Smile Card 4 -->
-              <div class="text-start">
-    <div class="slider relative max-w-4xl aspect-video mx-auto overflow-hidden cursor-ew-resize select-none">
-      <!-- AFTER image (full background) -->
-      <img src="/smile-gallery-img/smile-scan.png" alt="After Image"
-        class="absolute inset-0 w-full h-full object-cover z-0" />
-
-      <!-- BEFORE image (clipped wrapper at 50%) -->
-      <div class="beforeWrapper absolute inset-0 overflow-hidden z-10" style="width: 50%;">
-        <img src="/smile-gallery-img/smile.png" alt="Before Image"
-          class="absolute top-0 left-0 w-full h-full object-cover pointer-events-none" />
-      </div>
-
-      <!-- Divider line -->
-      <div class="divider absolute top-0 bottom-0 left-1/2 w-[2px] bg-white z-20 -translate-x-1/2"></div>
-
-      <!-- Draggable Handle -->
-      <div class="handle absolute top-1/2 left-1/2 w-8 h-8 bg-white border border-black rounded-full z-30 -translate-x-1/2 -translate-y-1/2 shadow-md pointer-events-none"></div>
-
-    
-    </div>
-    <!-- Text Content -->
-   <h4 class="font-baskervville text-[18px] mt-4 font-semibold">Patient Name</h4>
-    <p class="font-roboto text-[14px] mt-1 font-regular">
-      Teeth whitening is a popular aesthetic procedure. It can boost your confidence, and the process doesn’t take long.
-    </p>
-  </div>
-            <!-- Smile Card 5 -->
-               <div class="text-start">
-    <div class="slider relative max-w-4xl aspect-video mx-auto overflow-hidden cursor-ew-resize select-none">
-      <!-- AFTER image (full background) -->
-      <img src="/smile-gallery-img/smile-scan.png" alt="After Image"
-        class="absolute inset-0 w-full h-full object-cover z-0" />
-
-      <!-- BEFORE image (clipped wrapper at 50%) -->
-      <div class="beforeWrapper absolute inset-0 overflow-hidden z-10" style="width: 50%;">
-        <img src="/smile-gallery-img/smile.png" alt="Before Image"
-          class="absolute top-0 left-0 w-full h-full object-cover pointer-events-none" />
-      </div>
-
-      <!-- Divider line -->
-      <div class="divider absolute top-0 bottom-0 left-1/2 w-[2px] bg-white z-20 -translate-x-1/2"></div>
-
-      <!-- Draggable Handle -->
-      <div class="handle absolute top-1/2 left-1/2 w-8 h-8 bg-white border border-black rounded-full z-30 -translate-x-1/2 -translate-y-1/2 shadow-md pointer-events-none"></div>
-
-    
-    </div>
-    <!-- Text Content -->
-     <h4 class="font-baskervville text-[18px] mt-4 font-semibold">Patient Name</h4>
-    <p class="font-roboto text-[14px] mt-1 font-regular">
-      Teeth whitening is a popular aesthetic procedure. It can boost your confidence, and the process doesn’t take long.
-    </p>
-  </div>
-            <!-- Smile Card 6  -->
-
-                <div class="text-start">
-    <div class="slider relative max-w-4xl aspect-video mx-auto overflow-hidden cursor-ew-resize select-none">
-      <!-- AFTER image (full background) -->
-      <img src="/smile-gallery-img/smile-scan.png" alt="After Image"
-        class="absolute inset-0 w-full h-full object-cover z-0" />
-
-      <!-- BEFORE image (clipped wrapper at 50%) -->
-      <div class="beforeWrapper absolute inset-0 overflow-hidden z-10" style="width: 50%;">
-        <img src="/smile-gallery-img/smile.png" alt="Before Image"
-          class="absolute top-0 left-0 w-full h-full object-cover pointer-events-none" />
-      </div>
-
-      <!-- Divider line -->
-      <div class="divider absolute top-0 bottom-0 left-1/2 w-[2px] bg-white z-20 -translate-x-1/2"></div>
-
-      <!-- Draggable Handle -->
-      <div class="handle absolute top-1/2 left-1/2 w-8 h-8 bg-white border border-black rounded-full z-30 -translate-x-1/2 -translate-y-1/2 shadow-md pointer-events-none"></div>
-
-    </div>
-    <!-- Text Content -->
-   <h4 class="font-baskervville text-[18px] mt-4 font-semibold">Patient Name</h4>
-    <p class="font-roboto text-[14px] mt-1 font-regular">
-      Teeth whitening is a popular aesthetic procedure. It can boost your confidence, and the process doesn’t take long.
-    </p>
-  </div>
-
-            <!-- Smile Card 7 -->
-              <div class="text-start">
-    <div class="slider relative max-w-4xl aspect-video mx-auto overflow-hidden cursor-ew-resize select-none">
-      <!-- AFTER image (full background) -->
-      <img src="/smile-gallery-img/smile-scan.png" alt="After Image"
-        class="absolute inset-0 w-full h-full object-cover z-0" />
-
-      <!-- BEFORE image (clipped wrapper at 50%) -->
-      <div class="beforeWrapper absolute inset-0 overflow-hidden z-10" style="width: 50%;">
-        <img src="/smile-gallery-img/smile.png" alt="Before Image"
-          class="absolute top-0 left-0 w-full h-full object-cover pointer-events-none" />
-      </div>
-
-      <!-- Divider line -->
-      <div class="divider absolute top-0 bottom-0 left-1/2 w-[2px] bg-white z-20 -translate-x-1/2"></div>
-
-      <!-- Draggable Handle -->
-      <div class="handle absolute top-1/2 left-1/2 w-8 h-8 bg-white border border-black rounded-full z-30 -translate-x-1/2 -translate-y-1/2 shadow-md pointer-events-none"></div>
-
-    
-    </div>
-    <!-- Text Content -->
-   <h4 class="font-baskervville text-[18px] mt-4 font-semibold">Patient Name</h4>
-    <p class="font-roboto text-[14px] mt-1 font-regular">
-      Teeth whitening is a popular aesthetic procedure. It can boost your confidence, and the process doesn’t take long.
-    </p>
-  </div>
-
-            <!-- Smile Card 8 -->
-          
-      <div class="text-start">
-    <div class="slider relative max-w-4xl aspect-video mx-auto overflow-hidden cursor-ew-resize select-none">
-      <!-- AFTER image (full background) -->
-      <img src="/smile-gallery-img/smile-scan.png" alt="After Image"
-        class="absolute inset-0 w-full h-full object-cover z-0" />
-
-      <!-- BEFORE image (clipped wrapper at 50%) -->
-      <div class="beforeWrapper absolute inset-0 overflow-hidden z-10" style="width: 50%;">
-        <img src="/smile-gallery-img/smile.png" alt="Before Image"
-          class="absolute top-0 left-0 w-full h-full object-cover pointer-events-none" />
-      </div>
-
-      <!-- Divider line -->
-      <div class="divider absolute top-0 bottom-0 left-1/2 w-[2px] bg-white z-20 -translate-x-1/2"></div>
-
-      <!-- Draggable Handle -->
-      <div class="handle absolute top-1/2 left-1/2 w-8 h-8 bg-white border border-black rounded-full z-30 -translate-x-1/2 -translate-y-1/2 shadow-md pointer-events-none"></div>
-
-    </div>
-    <!-- Text Content -->
-    <h4 class="font-baskervville text-[18px] mt-4 font-semibold">Patient Name</h4>
-    <p class="font-roboto text-[14px] mt-1 font-regular">
-      Teeth whitening is a popular aesthetic procedure. It can boost your confidence, and the process doesn’t take long.
-    </p>
-  </div>
-            <!-- Smile Card 9 -->
-                 <div class="text-start">
-    <div class="slider relative max-w-4xl aspect-video mx-auto overflow-hidden cursor-ew-resize select-none">
-      <!-- AFTER image (full background) -->
-      <img src="/smile-gallery-img/smile-scan.png" alt="After Image"
-        class="absolute inset-0 w-full h-full object-cover z-0" />
-
-      <!-- BEFORE image (clipped wrapper at 50%) -->
-      <div class="beforeWrapper absolute inset-0 overflow-hidden z-10" style="width: 50%;">
-        <img src="/smile-gallery-img/smile.png" alt="Before Image"
-          class="absolute top-0 left-0 w-full h-full object-cover pointer-events-none" />
-      </div>
-
-      <!-- Divider line -->
-      <div class="divider absolute top-0 bottom-0 left-1/2 w-[2px] bg-white z-20 -translate-x-1/2"></div>
-
-      <!-- Draggable Handle -->
-      <div class="handle absolute top-1/2 left-1/2 w-8 h-8 bg-white border border-black rounded-full z-30 -translate-x-1/2 -translate-y-1/2 shadow-md pointer-events-none"></div>
-
-     
-    </div>
-    <!-- Text Content -->
-    <h4 class="font-baskervville text-[18px] mt-4 font-semibold">Patient Name</h4>
-    <p class="font-roboto text-[14px] mt-1 font-regular">
-      Teeth whitening is a popular aesthetic procedure. It can boost your confidence, and the process doesn’t take long.
-    </p>
-  </div>
-
-        </div>
-    </section>
-
-
-    <!-- CTA Section -->
-    <section
-        class="relative bg-cover bg-center bg-no-repeat text-white  px-6 md:px-16 lg:px-24 py-24 md:py-28 lg:py-32"
-        style="background-image: url('/smile-gallery-img/smile-scan.png'); min-height: 620px;">
-        <!-- Black overlay -->
-        <div class="absolute inset-0 bg-[#1E1C01] opacity-60 z-0"></div>
-
-        <!-- Content -->
-        <div class="relative z-10 text-center container mx-auto mt-12">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-baskervville font-medium leading-tight">
-                Your smile could be next — we&apos;re ready when you are.
-            </h2>
-
-            <!-- Button -->
-            <div class="mt-12">
-                <button
-                    class="bg-[#D8C119] text-[#1E1C01] font-medium py-3 px-6 md:px-8 text-base md:text-lg font-roboto hover:bg-yellow-400 transition duration-300">
-                    Book a Free Smile Scan
-                </button>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Footer -->
-      <footer class="bg-[#1A1A1A] text-white py-24">
-        <div class="container mx-auto px-4">
-            <div class="max-w-7xl mx-auto">
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-                    <!-- Logo & Address -->
-                    <div>
-                        <a href="/index.html" class="mb-4 inline-block">
-                            <img src="/homepage-img/yellow-logo-ffoter.png" alt="Braces & Roots Logo" class="h-12" />
-                        </a>
-                        <div class="mt-4">
-                            <p class="font-semibold">Hyderabad Address:</p>
-                            <p>Hyderabad (Jubilee Hills)</p>
-                            <p>+91-XXXXXXXXXX</p>
-                            <p>Mon–Sat: 10 AM – 8 PM</p>
-                        </div>
-                        <div class="mt-4">
-                            <p class="font-semibold">Kurnool Address:</p>
-                            <p>Kurnool (Ashok Nagar)</p>
-                            <p>+91-XXXXXXXXXX</p>
-                            <p>Mon–Sat: 10 AM – 7 PM</p>
-                        </div>
-                    </div>
-
-                    <!-- Quick Links -->
-                    <div>
-                        <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
-                        <ul class="space-y-2">
-                            <li>
-                                <a href="/index.html" class="hover:text-[#D8C119] transition duration-300">Home</a>
-                            </li>
-                            <li>
-                                <a href="aboutus.html" class="hover:text-[#D8C119] transition duration-300">About Us</a>
-                            </li>
-                            <li>
-                                <a href="smile-transformation.html" class="hover:text-[#D8C119] transition duration-300">Smile Gallery</a>
-                            </li>
-                            <li>
-                                <a href="internationalpage.html" class="hover:text-[#D8C119] transition duration-300">International
-                                    Patients</a>
-                            </li>
-                            <li>
-                                <a href="blog.html" class="hover:text-[#D8C119] transition duration-300">Blog</a>
-                            </li>
-                            <li>
-                                <a href="contactpage.html" class="hover:text-[#D8C119] transition duration-300">Contact</a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!-- Column Two -->
-                    <div>
-                        <h4 class="text-lg font-semibold mb-4">Column Two</h4>
-                        <ul class="space-y-2">
-                            <li>
-                                <a href="#" class="hover:text-[#D8C119] transition duration-300">Same-Day Crowns</a>
-                            </li>
-                            <li>
-                                <a href="#" class="hover:text-[#D8C119] transition duration-300">Smile Makeovers</a>
-                            </li>
-                            <li>
-                                <a href="#" class="hover:text-[#D8C119] transition duration-300">Root Canal</a>
-                            </li>
-                            <li>
-                                <a href="#" class="hover:text-[#D8C119] transition duration-300">Dental Implants</a>
-                            </li>
-                            <li>
-                                <a href="#" class="hover:text-[#D8C119] transition duration-300">Full Mouth Rehab</a>
-                            </li>
-                            <li>
-                                <a href="#" class="hover:text-[#D8C119] transition duration-300">CBCT & Oral Cancer
-                                    Screening</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Bottom Footer -->
-                <div class="border-t border-gray-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-                    <p>© 2025 Braces & Roots. All rights reserved.</p>
-
-                    <div class="flex gap-2 mt-4 md:mt-0">
-                        <a href="#" class="hover:text-[#D8C119] transition duration-300 underline">Privacy Policy</a>
-                        <a href="#" class="hover:text-[#D8C119] transition duration-300 underline">Terms of Service</a>
-                    </div>
-
-                    <div class="flex gap-4 mt-4 md:mt-0 text-xl text-white">
-                        <a href="#" aria-label="Facebook" class="hover:text-[#D8C119] transition duration-300">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#" aria-label="Instagram" class="hover:text-[#D8C119] transition duration-300">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="#" aria-label="X" class="hover:text-[#D8C119] transition duration-300">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" aria-label="LinkedIn" class="hover:text-[#D8C119] transition duration-300">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="#" aria-label="YouTube" class="hover:text-[#D8C119] transition duration-300">
-                            <i class="fab fa-youtube"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-
-    <!-- Slider Functionality Script -->
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const sliders = document.querySelectorAll(".slider");
-
-    sliders.forEach((slider) => {
-      const beforeWrapper = slider.querySelector(".beforeWrapper");
-      const handle = slider.querySelector(".handle");
-      const divider = slider.querySelector(".divider");
-
-      let isDragging = false;
-
-      const updateSlider = (clientX) => {
-        const rect = slider.getBoundingClientRect();
-        const offsetX = clientX - rect.left;
-        const clampedX = Math.max(0, Math.min(offsetX, rect.width));
-        const percent = (clampedX / rect.width) * 100;
-
-        beforeWrapper.style.width = `${percent}%`;
-        handle.style.left = `${percent}%`;
-        divider.style.left = `${percent}%`;
-      };
-
-      // Mouse events
-      slider.addEventListener("mousedown", () => isDragging = true);
-      document.addEventListener("mouseup", () => isDragging = false);
-      document.addEventListener("mousemove", (e) => {
-        if (isDragging) updateSlider(e.clientX);
-      });
-
-      // Touch events
-      slider.addEventListener("touchstart", () => isDragging = true);
-      document.addEventListener("touchend", () => isDragging = false);
-      document.addEventListener("touchmove", (e) => {
-        if (isDragging && e.touches.length > 0) updateSlider(e.touches[0].clientX);
-      });
-
-      // Init at 50%
-      updateSlider(slider.getBoundingClientRect().left + slider.offsetWidth / 2);
-    });
+ <script>
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const iconHamburger = document.getElementById('icon-hamburger');
+  const iconClose = document.getElementById('icon-close');
+
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+    iconHamburger.classList.toggle('hidden');
+    iconClose.classList.toggle('hidden');
   });
 </script>
+
+  <!-- Hero Section -->
+  <section class="w-full bg-white text-white mb-24 relative">
+    <!-- Background image filling the section -->
+    <div class="relative w-full h-[700px]">
+      <img src="/smile-gallery-img/1.png" alt="Clinic Interior" class="w-full md:h-full h-[600px] aspect-video object-cover" />
+
+
+      <!-- Yellow Call-to-Action Banner -->
+      <div class="w-full bg-[#D8C119] py-4 text-center">
+        <h3 class="text-black text-xl font-semibold">
+          Every Smile Has a Story. Let&apos;s Start Yours.
+          <a href="#book" class="underline font-medium">Book Your Smile Consultation</a>
+        </h3>
+      </div>
+  </section>
+
+
+  <!-- Before Meet After Section -->
+
+  <section class="w-full bg-white text-black py-16 md:pt-[112px] md:pb-[112px] ">
+    <div class="container mx-auto px-4 md:px-6 lg:px-16">
+        <!-- Heading -->
+    <div class="text-center max-w-4xl mx-auto mb-16 gap-24 ">
+      <h2 class="text-3xl md:text-5xl font-bold mb-4 font-baskervville">
+        Before Meets After.<br />
+        This Is What Possibility Looks Like.
+      </h2>
+      <p class="text-[18px] font-medium font-roboto">
+        Explore real patient journeys — from uncertainty to confidence, from hiding their smile to lighting up
+        the
+        room. All crafted with precision, care, and innovation at Braces & Roots.
+      </p>
+    </div>
+
+    <!-- Patient smile gallery -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 container mx-auto">
+      <!-- Smile Card Template - Repeat as needed -->
+      <div class="text-start">
+        <div class="slider relative max-w-4xl aspect-video mx-auto overflow-hidden cursor-ew-resize select-none">
+          <!-- AFTER image (full background) -->
+          <img src="/smile-gallery-img/smile-scan.png" alt="After Image"
+            class="absolute inset-0 w-full h-full object-cover z-0" />
+
+          <!-- BEFORE image (clipped wrapper at 50%) -->
+          <div class="beforeWrapper absolute inset-0 overflow-hidden z-10" style="width: 50%;">
+            <img src="/smile-gallery-img/smile.png" alt="Before Image"
+              class="absolute top-0 left-0 w-full h-full object-cover pointer-events-none" />
+          </div>
+
+          <!-- Divider line -->
+          <div class="divider absolute top-0 bottom-0 left-1/2 w-[2px] bg-white z-20 -translate-x-1/2"></div>
+
+          <!-- Draggable Handle -->
+          <div
+            class="handle absolute top-1/2 left-1/2 w-8 h-8 bg-white border border-black rounded-full z-30 -translate-x-1/2 -translate-y-1/2 shadow-md pointer-events-none">
+          </div>
+
+        </div>
+        <!-- Text Content -->
+        <h4 class="font-baskervville text-[18px] mt-4 font-semibold">Patient Name</h4>
+        <p class="font-roboto text-[14px] mt-1 font-regular">
+          Teeth whitening is a popular aesthetic procedure. It can boost your confidence, and the process doesn’t take
+          long.
+        </p>
+      </div>
+
+
+      <!-- Smile Card 2 -->
+      <div class="text-start">
+        <div class="slider relative max-w-4xl aspect-video mx-auto overflow-hidden cursor-ew-resize select-none">
+          <!-- AFTER image (full background) -->
+          <img src="/smile-gallery-img/smile-scan.png" alt="After Image"
+            class="absolute inset-0 w-full h-full object-cover z-0" />
+
+          <!-- BEFORE image (clipped wrapper at 50%) -->
+          <div class="beforeWrapper absolute inset-0 overflow-hidden z-10" style="width: 50%;">
+            <img src="/smile-gallery-img/smile.png" alt="Before Image"
+              class="absolute top-0 left-0 w-full h-full object-cover pointer-events-none" />
+          </div>
+
+          <!-- Divider line -->
+          <div class="divider absolute top-0 bottom-0 left-1/2 w-[2px] bg-white z-20 -translate-x-1/2"></div>
+
+          <!-- Draggable Handle -->
+          <div
+            class="handle absolute top-1/2 left-1/2 w-8 h-8 bg-white border border-black rounded-full z-30 -translate-x-1/2 -translate-y-1/2 shadow-md pointer-events-none">
+          </div>
+
+
+        </div>
+        <!-- Text Content -->
+        <h4 class="font-baskervville text-[18px] mt-4 font-semibold">Patient Name</h4>
+        <p class="font-roboto text-[14px] mt-1 font-regular">
+          Teeth whitening is a popular aesthetic procedure. It can boost your confidence, and the process doesn’t take
+          long.
+        </p>
+      </div>
+      <!-- Smile Card 3 -->
+      <div class="text-start">
+        <div class="slider relative max-w-4xl aspect-video mx-auto overflow-hidden cursor-ew-resize select-none">
+          <!-- AFTER image (full background) -->
+          <img src="/smile-gallery-img/smile-scan.png" alt="After Image"
+            class="absolute inset-0 w-full h-full object-cover z-0" />
+
+          <!-- BEFORE image (clipped wrapper at 50%) -->
+          <div class="beforeWrapper absolute inset-0 overflow-hidden z-10" style="width: 50%;">
+            <img src="/smile-gallery-img/smile.png" alt="Before Image"
+              class="absolute top-0 left-0 w-full h-full object-cover pointer-events-none" />
+          </div>
+
+          <!-- Divider line -->
+          <div class="divider absolute top-0 bottom-0 left-1/2 w-[2px] bg-white z-20 -translate-x-1/2"></div>
+
+          <!-- Draggable Handle -->
+          <div
+            class="handle absolute top-1/2 left-1/2 w-8 h-8 bg-white border border-black rounded-full z-30 -translate-x-1/2 -translate-y-1/2 shadow-md pointer-events-none">
+          </div>
+          an>
+        </div>
+        <!-- Text Content -->
+        <h4 class="font-baskervville text-[18px] mt-4 font-semibold">Patient Name</h4>
+        <p class="font-roboto text-[14px] mt-1 font-regular">
+          Teeth whitening is a popular aesthetic procedure. It can boost your confidence, and the process doesn’t take
+          long.
+        </p>
+      </div>
+
+      <!-- Smile Card 4 -->
+      <div class="text-start">
+        <div class="slider relative max-w-4xl aspect-video mx-auto overflow-hidden cursor-ew-resize select-none">
+          <!-- AFTER image (full background) -->
+          <img src="/smile-gallery-img/smile-scan.png" alt="After Image"
+            class="absolute inset-0 w-full h-full object-cover z-0" />
+
+          <!-- BEFORE image (clipped wrapper at 50%) -->
+          <div class="beforeWrapper absolute inset-0 overflow-hidden z-10" style="width: 50%;">
+            <img src="/smile-gallery-img/smile.png" alt="Before Image"
+              class="absolute top-0 left-0 w-full h-full object-cover pointer-events-none" />
+          </div>
+
+          <!-- Divider line -->
+          <div class="divider absolute top-0 bottom-0 left-1/2 w-[2px] bg-white z-20 -translate-x-1/2"></div>
+
+          <!-- Draggable Handle -->
+          <div
+            class="handle absolute top-1/2 left-1/2 w-8 h-8 bg-white border border-black rounded-full z-30 -translate-x-1/2 -translate-y-1/2 shadow-md pointer-events-none">
+          </div>
+
+
+        </div>
+        <!-- Text Content -->
+        <h4 class="font-baskervville text-[18px] mt-4 font-semibold">Patient Name</h4>
+        <p class="font-roboto text-[14px] mt-1 font-regular">
+          Teeth whitening is a popular aesthetic procedure. It can boost your confidence, and the process doesn’t take
+          long.
+        </p>
+      </div>
+      <!-- Smile Card 5 -->
+      <div class="text-start">
+        <div class="slider relative max-w-4xl aspect-video mx-auto overflow-hidden cursor-ew-resize select-none">
+          <!-- AFTER image (full background) -->
+          <img src="/smile-gallery-img/smile-scan.png" alt="After Image"
+            class="absolute inset-0 w-full h-full object-cover z-0" />
+
+          <!-- BEFORE image (clipped wrapper at 50%) -->
+          <div class="beforeWrapper absolute inset-0 overflow-hidden z-10" style="width: 50%;">
+            <img src="/smile-gallery-img/smile.png" alt="Before Image"
+              class="absolute top-0 left-0 w-full h-full object-cover pointer-events-none" />
+          </div>
+
+          <!-- Divider line -->
+          <div class="divider absolute top-0 bottom-0 left-1/2 w-[2px] bg-white z-20 -translate-x-1/2"></div>
+
+          <!-- Draggable Handle -->
+          <div
+            class="handle absolute top-1/2 left-1/2 w-8 h-8 bg-white border border-black rounded-full z-30 -translate-x-1/2 -translate-y-1/2 shadow-md pointer-events-none">
+          </div>
+
+
+        </div>
+        <!-- Text Content -->
+        <h4 class="font-baskervville text-[18px] mt-4 font-semibold">Patient Name</h4>
+        <p class="font-roboto text-[14px] mt-1 font-regular">
+          Teeth whitening is a popular aesthetic procedure. It can boost your confidence, and the process doesn’t take
+          long.
+        </p>
+      </div>
+      <!-- Smile Card 6  -->
+
+      <div class="text-start">
+        <div class="slider relative max-w-4xl aspect-video mx-auto overflow-hidden cursor-ew-resize select-none">
+          <!-- AFTER image (full background) -->
+          <img src="/smile-gallery-img/smile-scan.png" alt="After Image"
+            class="absolute inset-0 w-full h-full object-cover z-0" />
+
+          <!-- BEFORE image (clipped wrapper at 50%) -->
+          <div class="beforeWrapper absolute inset-0 overflow-hidden z-10" style="width: 50%;">
+            <img src="/smile-gallery-img/smile.png" alt="Before Image"
+              class="absolute top-0 left-0 w-full h-full object-cover pointer-events-none" />
+          </div>
+
+          <!-- Divider line -->
+          <div class="divider absolute top-0 bottom-0 left-1/2 w-[2px] bg-white z-20 -translate-x-1/2"></div>
+
+          <!-- Draggable Handle -->
+          <div
+            class="handle absolute top-1/2 left-1/2 w-8 h-8 bg-white border border-black rounded-full z-30 -translate-x-1/2 -translate-y-1/2 shadow-md pointer-events-none">
+          </div>
+
+        </div>
+        <!-- Text Content -->
+        <h4 class="font-baskervville text-[18px] mt-4 font-semibold">Patient Name</h4>
+        <p class="font-roboto text-[14px] mt-1 font-regular">
+          Teeth whitening is a popular aesthetic procedure. It can boost your confidence, and the process doesn’t take
+          long.
+        </p>
+      </div>
+
+      <!-- Smile Card 7 -->
+      <div class="text-start">
+        <div class="slider relative max-w-4xl aspect-video mx-auto overflow-hidden cursor-ew-resize select-none">
+          <!-- AFTER image (full background) -->
+          <img src="/smile-gallery-img/smile-scan.png" alt="After Image"
+            class="absolute inset-0 w-full h-full object-cover z-0" />
+
+          <!-- BEFORE image (clipped wrapper at 50%) -->
+          <div class="beforeWrapper absolute inset-0 overflow-hidden z-10" style="width: 50%;">
+            <img src="/smile-gallery-img/smile.png" alt="Before Image"
+              class="absolute top-0 left-0 w-full h-full object-cover pointer-events-none" />
+          </div>
+
+          <!-- Divider line -->
+          <div class="divider absolute top-0 bottom-0 left-1/2 w-[2px] bg-white z-20 -translate-x-1/2"></div>
+
+          <!-- Draggable Handle -->
+          <div
+            class="handle absolute top-1/2 left-1/2 w-8 h-8 bg-white border border-black rounded-full z-30 -translate-x-1/2 -translate-y-1/2 shadow-md pointer-events-none">
+          </div>
+
+
+        </div>
+        <!-- Text Content -->
+        <h4 class="font-baskervville text-[18px] mt-4 font-semibold">Patient Name</h4>
+        <p class="font-roboto text-[14px] mt-1 font-regular">
+          Teeth whitening is a popular aesthetic procedure. It can boost your confidence, and the process doesn’t take
+          long.
+        </p>
+      </div>
+
+      <!-- Smile Card 8 -->
+
+      <div class="text-start">
+        <div class="slider relative max-w-4xl aspect-video mx-auto overflow-hidden cursor-ew-resize select-none">
+          <!-- AFTER image (full background) -->
+          <img src="/smile-gallery-img/smile-scan.png" alt="After Image"
+            class="absolute inset-0 w-full h-full object-cover z-0" />
+
+          <!-- BEFORE image (clipped wrapper at 50%) -->
+          <div class="beforeWrapper absolute inset-0 overflow-hidden z-10" style="width: 50%;">
+            <img src="/smile-gallery-img/smile.png" alt="Before Image"
+              class="absolute top-0 left-0 w-full h-full object-cover pointer-events-none" />
+          </div>
+
+          <!-- Divider line -->
+          <div class="divider absolute top-0 bottom-0 left-1/2 w-[2px] bg-white z-20 -translate-x-1/2"></div>
+
+          <!-- Draggable Handle -->
+          <div
+            class="handle absolute top-1/2 left-1/2 w-8 h-8 bg-white border border-black rounded-full z-30 -translate-x-1/2 -translate-y-1/2 shadow-md pointer-events-none">
+          </div>
+
+        </div>
+        <!-- Text Content -->
+        <h4 class="font-baskervville text-[18px] mt-4 font-semibold">Patient Name</h4>
+        <p class="font-roboto text-[14px] mt-1 font-regular">
+          Teeth whitening is a popular aesthetic procedure. It can boost your confidence, and the process doesn’t take
+          long.
+        </p>
+      </div>
+      <!-- Smile Card 9 -->
+      <div class="text-start">
+        <div class="slider relative max-w-4xl aspect-video mx-auto overflow-hidden cursor-ew-resize select-none">
+          <!-- AFTER image (full background) -->
+          <img src="/smile-gallery-img/smile-scan.png" alt="After Image"
+            class="absolute inset-0 w-full h-full object-cover z-0" />
+
+          <!-- BEFORE image (clipped wrapper at 50%) -->
+          <div class="beforeWrapper absolute inset-0 overflow-hidden z-10" style="width: 50%;">
+            <img src="/smile-gallery-img/smile.png" alt="Before Image"
+              class="absolute top-0 left-0 w-full h-full object-cover pointer-events-none" />
+          </div>
+
+          <!-- Divider line -->
+          <div class="divider absolute top-0 bottom-0 left-1/2 w-[2px] bg-white z-20 -translate-x-1/2"></div>
+
+          <!-- Draggable Handle -->
+          <div
+            class="handle absolute top-1/2 left-1/2 w-8 h-8 bg-white border border-black rounded-full z-30 -translate-x-1/2 -translate-y-1/2 shadow-md pointer-events-none">
+          </div>
+
+
+        </div>
+        <!-- Text Content -->
+        <h4 class="font-baskervville text-[18px] mt-4 font-semibold">Patient Name</h4>
+        <p class="font-roboto text-[14px] mt-1 font-regular">
+          Teeth whitening is a popular aesthetic procedure. It can boost your confidence, and the process doesn’t take
+          long.
+        </p>
+      </div>
+
+    </div>
+    </div>
+  </section>
+
+
+  <!-- CTA Section -->
+  <section class="relative bg-cover bg-center bg-no-repeat text-white  px-6 md:px-16 lg:px-24 py-24 md:py-28 lg:py-32"
+    style="background-image: url('/smile-gallery-img/smile-scan.png'); min-height: 620px;">
+    <!-- Black overlay -->
+    <div class="absolute inset-0 bg-[#1E1C01] opacity-60 z-0"></div>
+
+    <!-- Content -->
+    <div class="relative z-10 text-center container mx-auto mt-12">
+      <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-baskervville font-medium leading-tight">
+        Your smile could be next — we&apos;re ready when you are.
+      </h2>
+
+      <!-- Button -->
+      <div class="mt-12">
+        <button
+          class="bg-[#D8C119] text-[#1E1C01] hover:text-[#D8C119] hover:bg-[#1E1C01] hover:outline font-medium py-3 px-6 md:px-8 text-base md:text-lg font-roboto transition duration-300">
+          Book a Free Smile Scan
+        </button>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="bg-[#1A1A1A] text-white py-20 md:pt-[112px] md:pb-[112px] md:pr-[64px] md:pl-[64px]">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-16">
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <!-- Logo & Address -->
+        <div>
+          <a href="/" class="mb-4 inline-block">
+            <img src="/homepage-img/yellow-logo-ffoter.png" alt="Braces & Roots Logo" class="h-12" />
+          </a>
+          <div class="mt-4">
+            <p class="font-semibold">Hyderabad Address:</p>
+            <p>Hyderabad (Jubilee Hills)</p>
+            <p>+91-XXXXXXXXXX</p>
+            <p>Mon–Sat: 10 AM – 8 PM</p>
+          </div>
+          <div class="mt-4">
+            <p class="font-semibold">Kurnool Address:</p>
+            <p>Kurnool (Ashok Nagar)</p>
+            <p>+91-XXXXXXXXXX</p>
+            <p>Mon–Sat: 10 AM – 7 PM</p>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+          <ul class="space-y-2">
+            <li>
+              <a href="/" class="hover:text-[#D8C119] transition duration-300">Home</a>
+            </li>
+            <li>
+              <a href="/aboutus.html" class="hover:text-[#D8C119] transition duration-300">About Us</a>
+            </li>
+            <li>
+              <a href="/smile-transformation.html" class="hover:text-[#D8C119] transition duration-300">Smile
+                Gallery</a>
+            </li>
+            <li>
+              <a href="/internationalpage.html" class="hover:text-[#D8C119] transition duration-300">International
+                Patients</a>
+            </li>
+            <li>
+              <a href="/blog.html" class="hover:text-[#D8C119] transition duration-300">Blog</a>
+            </li>
+            <li>
+              <a href="/contact.html" class="hover:text-[#D8C119] transition duration-300">Contact</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Column Two -->
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Column Two</h4>
+          <ul class="space-y-2">
+            <li>
+              <a href="/" class="hover:text-[#D8C119] transition duration-300">Same-Day Crowns</a>
+            </li>
+            <li>
+              <a href="" class="hover:text-[#D8C119] transition duration-300">Smile Makeovers</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-[#D8C119] transition duration-300">Root Canal</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-[#D8C119] transition duration-300">Dental Implants</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-[#D8C119] transition duration-300">Full Mouth Rehab</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-[#D8C119] transition duration-300">CBCT & Oral Cancer
+                Screening</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom Footer -->
+      <div class="border-t border-gray-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <p>© 2025 Braces & Roots. All rights reserved.</p>
+
+        <div class="flex gap-2 mt-4 md:mt-0">
+          <a href="#" class="hover:text-[#D8C119] transition duration-300 underline">Privacy Policy</a>
+          <a href="#" class="hover:text-[#D8C119] transition duration-300 underline">Terms of Service</a>
+        </div>
+
+        <div class="flex gap-4 mt-4 md:mt-0 text-xl text-white">
+          <a href="#" aria-label="Facebook" class="hover:text-[#D8C119] transition duration-300">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="#" aria-label="Instagram" class="hover:text-[#D8C119] transition duration-300">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="#" aria-label="X" class="hover:text-[#D8C119] transition duration-300">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="#" aria-label="LinkedIn" class="hover:text-[#D8C119] transition duration-300">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="#" aria-label="YouTube" class="hover:text-[#D8C119] transition duration-300">
+            <i class="fab fa-youtube"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- Slider Functionality Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const sliders = document.querySelectorAll(".slider");
+
+      sliders.forEach((slider) => {
+        const beforeWrapper = slider.querySelector(".beforeWrapper");
+        const handle = slider.querySelector(".handle");
+        const divider = slider.querySelector(".divider");
+
+        let isDragging = false;
+
+        const updateSlider = (clientX) => {
+          const rect = slider.getBoundingClientRect();
+          const offsetX = clientX - rect.left;
+          const clampedX = Math.max(0, Math.min(offsetX, rect.width));
+          const percent = (clampedX / rect.width) * 100;
+
+          beforeWrapper.style.width = `${percent}%`;
+          handle.style.left = `${percent}%`;
+          divider.style.left = `${percent}%`;
+        };
+
+        // Mouse events
+        slider.addEventListener("mousedown", () => isDragging = true);
+        document.addEventListener("mouseup", () => isDragging = false);
+        document.addEventListener("mousemove", (e) => {
+          if (isDragging) updateSlider(e.clientX);
+        });
+
+        // Touch events
+        slider.addEventListener("touchstart", () => isDragging = true);
+        document.addEventListener("touchend", () => isDragging = false);
+        document.addEventListener("touchmove", (e) => {
+          if (isDragging && e.touches.length > 0) updateSlider(e.touches[0].clientX);
+        });
+
+        // Init at 50%
+        updateSlider(slider.getBoundingClientRect().left + slider.offsetWidth / 2);
+      });
+    });
+  </script>
 </body>
 
 </html>

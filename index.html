@@ -1,687 +1,783 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Braces & Roots - Premium Dental Care</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    />
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Baskervville:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              poppins: ["Poppins", "sans-serif"],
-              baskervville: ["Baskervville", "serif"],
-            },
-            colors: {
-              primary: "#3b82f6",
-              secondary: "#1e40af",
-            },
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Braces & Roots - Premium Dental Care</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Baskervville:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            roboto: ["Roboto"],
+            baskervville: ["Baskervville"],
+          },
+          screens: {
+            'xl2': '1230px', // custom breakpoint
+          },
+          colors: {
+            primary: "#3b82f6",
+            secondary: "#1e40af",
           },
         },
-      };
-    </script>
-    <!-- Scroll JS -->
-<script>
-  function scrollTestimonials(direction) {
-    const slider = document.getElementById("testimonialSlider");
-    const scrollAmount = 320; // Approx one card width + gap
-    slider.scrollBy({ left: direction * scrollAmount, behavior: "smooth" });
-  }
-</script>
+      },
+    };
+  </script>
+  <!-- Scroll JS -->
+  <script>
+    function scrollTestimonials(direction) {
+      const slider = document.getElementById("testimonialSlider");
+      const scrollAmount = 320; // Approx one card width + gap
+      slider.scrollBy({ left: direction * scrollAmount, behavior: "smooth" });
+    }
+  </script>
 
-<!-- Hide scrollbar (optional CSS if not using Tailwind plugin) -->
-<style>
-  .no-scrollbar::-webkit-scrollbar {
-    display: none;
-  }
-  .no-scrollbar {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
-</style>
-    <style>
-      .hero-image {
-        background-image: url("/homepage-img/image-1.jpg");
-        background-size: cover;
-        background-position: center;
-        height: 400px;
-      }
-      .appointment-bg {
-        background-image: url("/homepage-img/testimonial-1.png");
-        background-size: cover;
-        background-position: center;
-        position: relative;
-      }
-      .appointment-bg::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: rgba(255, 255, 255, 0.9);
-      }
-      .appointment-content {
-        position: relative;
-        z-index: 1;
-      }
-    </style>
-  </head>
-  <body class="text-gray-800">
-    <!-- Header/Navigation -->
-     <header class="sticky top-0 z-50 bg-white border-b border-gray-200 px-4 w-full">
-    <div class="container mx-auto flex justify-between items-center h-[105px]">
+  <!-- Hide scrollbar (optional CSS if not using Tailwind plugin) -->
+  <style>
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
 
-      <!-- Logo -->
-      <a href="/index.html" class="flex items-center">
-        <div class="w-[155px] h-[53px] flex items-center justify-center overflow-hidden">
-          <img src="/homepage-img/yellow-logo.png" alt="Braces & Roots Logo" class="object-contain h-full" />
-        </div>
-      </a>
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+  <style>
+    .hero-image {
+      background-image: url("/homepage-img/image-1.jpg");
+      background-size: cover;
+      background-position: center;
+      height: 400px;
+    }
 
-      <!-- Hamburger Button (Mobile) -->
-      <button id="menu-btn" class="md:hidden text-[#1A1A1A] focus:outline-none" aria-label="Toggle Menu">
-        <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2"
-          viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-      </button>
+    .appointment-bg {
+      background-image: url("/homepage-img/testimonial-1.png");
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+
+    .appointment-bg::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(255, 255, 255, 0.9);
+    }
+
+    .appointment-content {
+      position: relative;
+      z-index: 1;
+    }
+  </style>
+</head>
+
+<body class="text-gray-800">
+<!-- Header -->
+<header class="sticky top-0 z-50 bg-white border-b border-gray-200 w-full">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-16 flex justify-between items-center h-[105px]">
+
+    <!-- Logo -->
+    <a href="/" class="flex items-center">
+      <div class="w-[155px] h-[53px] flex items-center justify-center overflow-hidden">
+        <img src="/homepage-img/yellow-logo.png" alt="Braces & Roots Logo" class="object-contain h-full" />
+      </div>
+    </a>
+
+    <!-- Hamburger Button -->
+    <button id="menu-btn" class="xl2:hidden text-[#1A1A1A] focus:outline-none" aria-label="Toggle menu">
+      <!-- Hamburger Icon -->
+      <svg id="icon-hamburger" class="w-7 h-7 block" fill="none" stroke="currentColor" stroke-width="2"
+        viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+      <!-- Close Icon -->
+      <svg id="icon-close" class="w-7 h-7 hidden" fill="none" stroke="currentColor" stroke-width="2"
+        viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
 
       <!-- Desktop Navigation -->
-      <nav class="hidden md:flex items-center gap-6">
-        <a href="#" class="text-[#1A1A1A] font-medium font-roboto flex items-center gap-1">
+      <nav class="hidden xl2:flex items-center gap-6">
+        <a href="/service.html"
+          class="text-[#1A1A1A] font-medium font-roboto hover:text-[#D8C119] flex items-center gap-1">
           Treatments
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"
-            viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+            stroke-linecap="round" stroke-linejoin="round">
             <path d="M19 9l-7 7-7-7" />
           </svg>
         </a>
-        <a href="/technologypage.html" class="text-[#1A1A1A] font-medium font-roboto">Technology</a>
-        <a href="/internationalpage.html" class="text-[#1A1A1A] font-medium font-roboto">International Patients</a>
-        <a href="/smile-transformation.html" class="text-[#1A1A1A] font-medium font-roboto">Smile Gallery</a>
-        <a href="/aboutus.html" class="text-[#1A1A1A] font-medium font-roboto">About Us</a>
-        <a href="/contactpage.html" class="text-[#1A1A1A] font-medium font-roboto">Contact</a>
+        <a href="/technologypage.html"
+          class="text-[#1A1A1A] font-medium font-roboto hover:text-[#D8C119]">Technology</a>
+        <a href="/internationalpage.html"
+          class="text-[#1A1A1A] font-medium font-roboto hover:text-[#D8C119]">International Patients</a>
+        <a href="/smile-transformation.html" class="text-[#1A1A1A] font-medium font-roboto hover:text-[#D8C119]">Smile
+          Gallery</a>
+        <a href="/aboutus.html" class="text-[#1A1A1A] font-medium font-roboto hover:text-[#D8C119]">About Us</a>
+        <a href="/contactpage.html" class="text-[#1A1A1A] font-medium font-roboto hover:text-[#D8C119]">Contact</a>
       </nav>
 
-      <!-- Call to Action (Desktop) -->
-      <div class="hidden md:flex items-center">
-        <a href="tel:+1234567890"
-          class="h-[48px] w-[98px] flex items-center justify-center bg-[#1E1C01] text-[#D8C119] font-medium font-roboto">
-          Call us
-        </a>
-      </div>
+      <!-- Desktop Call to Action -->
+        <div class="hidden xl2:flex items-center">
+      <a href="tel:+1234567890"
+        class="h-[48px] w-[98px] flex items-center justify-center bg-[#1E1C01] text-[#D8C119] hover:bg-[#D8C119] hover:text-[#1E1C01] font-medium font-roboto">
+        Call us
+      </a>
     </div>
-
-    <!-- Mobile Menu (hidden by default) -->
-    <div id="mobile-menu" class="md:hidden hidden border-t border-gray-200 bg-white px-4 pb-6">
-      <nav class="flex flex-col gap-4 mt-4">
-        <a href="#" class="text-[#1A1A1A] font-medium font-roboto flex items-center gap-1">
+  </div>
+    <!-- Mobile Navigation -->
+     <div id="mobile-menu"
+    class="xl2:hidden hidden border-t border-gray-200 bg-white px-4 pb-6 transition-all duration-300 ease-in-out">
+    <nav class="flex flex-col gap-4 mt-4">
+        <a href="/service.html"
+          class="text-[#1A1A1A] font-medium font-roboto hover:text-[#D8C119] flex items-center gap-1">
           Treatments
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"
-            viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+            stroke-linecap="round" stroke-linejoin="round">
             <path d="M19 9l-7 7-7-7" />
           </svg>
         </a>
-        <a href="/technologypage.html" class="text-[#1A1A1A] font-medium font-roboto">Technology</a>
-        <a href="/internationalpage.html" class="text-[#1A1A1A] font-medium font-roboto">International Patients</a>
-        <a href="/smile-transformation.html" class="text-[#1A1A1A] font-medium font-roboto">Smile Gallery</a>
-        <a href="/aboutus.html" class="text-[#1A1A1A] font-medium font-roboto">About Us</a>
-        <a href="/contactpage.html" class="text-[#1A1A1A] font-medium font-roboto">Contact</a>
+        <a href="/technologypage.html"
+          class="text-[#1A1A1A] font-medium font-roboto hover:text-[#D8C119]">Technology</a>
+        <a href="/internationalpage.html"
+          class="text-[#1A1A1A] font-medium font-roboto hover:text-[#D8C119]">International Patients</a>
+        <a href="/smile-transformation.html" class="text-[#1A1A1A] font-medium font-roboto hover:text-[#D8C119]">Smile
+          Gallery</a>
+        <a href="/aboutus.html" class="text-[#1A1A1A] font-medium font-roboto hover:text-[#D8C119]">About Us</a>
+        <a href="/contactpage.html" class="text-[#1A1A1A] font-medium font-roboto hover:text-[#D8C119]">Contact</a>
         <a href="tel:+1234567890"
-          class="mt-4 h-[48px] w-full flex items-center justify-center bg-[#1E1C01] text-[#D8C119] font-medium font-roboto">
+          class="mt-4 h-12 w-[150px] flex items-center justify-center bg-[#1E1C01] text-[#D8C119] hover:bg-[#D8C119] hover:text-[#1E1C01] font-medium font-roboto text-base">
           Call us
         </a>
+
       </nav>
     </div>
   </header>
 
-    
   <!-- JS for Mobile Menu Toggle -->
-  <script>
-    const menuBtn = document.getElementById('menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
+ <script>
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const iconHamburger = document.getElementById('icon-hamburger');
+  const iconClose = document.getElementById('icon-close');
 
-    menuBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
-  </script>
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+    iconHamburger.classList.toggle('hidden');
+    iconClose.classList.toggle('hidden');
+  });
+</script>
 
-    <!-- Hero Section -->
-<section class="bg-white">
-  <div class="container mx-auto px-4">
-    <div class="w-full h-full">
-      <!-- Custom 5-column grid -->
-      <div class="grid grid-cols-1 lg:grid-cols-5">
-        <!-- Left Column - Text Content (2/5 width) -->
-        <div
-          class="flex flex-col justify-center px-4 sm:px-8 lg:px-12 py-8 lg:py-0 order-2 lg:order-1 lg:col-span-2 bg-white relative z-10"
-        >
-          <div class="max-w-5xl mx-auto lg:mr-0">
-            <h1
-              class="text-4xl md:text-5xl lg:text-[47px] text-[#D8C119] leading-tight mb-6 font-semibold font-baskervville"
-            >
-              Meet the Visionaries<br />
-              <span>Behind Braces & Roots</span>
-            </h1>
-            <p class="text-[18px] font-roboto font-[400] text-[#1E1C01] mb-8 leading-relaxed">
-              Dr. Wahab and Dr. Sumaiya are globally trained dental
-              specialists who returned to India with a mission — to bring
-              international standards of care and advanced technology to
-              their hometown, Kurnool. With decades of experience in Saudi
-              Arabia and India, their vision is to create a premium,
-              patient-first dental experience rooted in trust, innovation,
-              and compassion.
-            </p>
-            <a
-              href="#about"
-              class="h-[48px] w-[130px] flex items-center justify-center bg-[#1E1C01] text-[#D8C119] font-medium font-roboto"
-            >
-              Learn More
-            </a>
-          </div>
-          <!-- White divider line with shadow -->
-          <div
-            class="absolute right-0 top-0 bottom-0 w-0.5 bg-white shadow-[4px_0_10px_rgba(255,255,255,0.8)] z-20"
-          ></div>
-        </div>
+  <!-- Hero Section -->
+  <section
+    class="relative bg-cover bg-center bg-no-repeat min-h-[70vh] sm:min-h-[80vh] lg:h-screen flex items-center justify-center py-12 sm:py-16 md:py-20 lg:pt-[112px] lg:pb-[112px] px-4 sm:px-8 md:px-12 lg:px-[64px]"
+    style="background-image: url('/internationalpage/hero.jpg')">
+    <!-- Dark overlay -->
+    <div class="absolute inset-0 bg-black opacity-40"></div>
 
-        <!-- Right Column - Focused Image (3/5 width) -->
-        <div
-          class="relative order-1 lg:order-2 h-[400px] lg:h-[calc(100vh-56px)] lg:col-span-3 lg:-mr-4"
-        >
-          <img
-            src="/homepage-img/image-1.jpg"
-            alt="Dr. Wahab and Dr. Sumaiya"
-            class="absolute inset-0 w-full h-full object-cover object-left-top lg:object-[70%_center]"
-            loading="lazy"
-            style="object-position: 70% center"
-          />
-          <!-- White cloudy effect overlay on left side -->
-          <div
-            class="absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-white/70 via-white/40 to-white/0"
-          ></div>
-          <!-- Subtle left edge shadow only on mobile -->
-          <div
-            class="absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-black/15 to-transparent lg:hidden"
-          ></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-    <!-- Popular Treatments Section -->
-    <section class="pt-[112px] pb-[112px] pr-[64px] pl-[64px] bg-[#1E1C01] text-white">
-      <div class="container mx-auto px-4">
-        <h2
-          class="text-[48px] text-center mb-4 font-baskervville font-semibold"
-        >
-          Popular Treatments
-        </h2>
-        <p
-          class="text-center max-w-3xl mx-auto mb-12 font-roboto text-lg leading-relaxed"
-        >
-          We invest in technology to save you time, reduce chair-time, and<br
-            class="hidden md:block"
-          />
-          improve your overall treatment outcomes.
+    <!-- Content -->
+    <div class="container mx-auto px-4 text-center relative z-10">
+      <div class="max-w-3xl mx-auto text-white">
+        <h1
+          class="text-3xl sm:text-4xl md:text-[42px] lg:text-[47px] font-baskervville font-semibold leading-[1.1] mb-4 sm:mb-6">
+          World-Class Dental Care,<br class="hidden sm:inline" />
+          Now Closer Than You Think
+        </h1>
+        <p class="text-base sm:text-[17px] md:text-[18px] font-roboto mb-8 sm:mb-10 mx-auto font-[400] leading-relaxed">
+          From Dubai to the UK, international patients trust Braces & Roots
+          for advanced treatments,<br class="hidden sm:inline" />
+          transparent care, and a smooth dental journey in India.
         </p>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <!-- Treatment 1 -->
-          <div class="p-8 text-center h-full flex flex-col items-center">
-            <div class="w-16 h-16 mb-6 flex items-center justify-center">
-              <img
-                src="/homepage-img/teeth-magnify.png"
-                alt="Checkup icon"
-                class="w-full h-full object-contain"
-              />
-            </div>
-            <h3 class="text-2xl font-semibold mb-4 font-roboto">
-              Digital Full-Mouth<br/> Check-up
-            </h3>
-            <p class="text-white/90 font-roboto text-lg">
-              Comprehensive diagnostics with<br/> zero guesswork
-            </p>
-          </div>
-
-          <!-- Treatment 2 -->
-          <div class="p-8 text-center h-full flex flex-col items-center">
-            <div class="w-16 h-16 mb-6 flex items-center justify-center">
-              <img
-                src="/homepage-img/only-magnify-withteeth.png"
-                alt="3D Scan icon"
-                class="w-full h-full object-contain"
-              />
-            </div>
-            <h3 class="text-2xl font-semibold mb-4 font-roboto">
-              3D CBCT Scans for<br/> Jaw & Sinus
-            </h3>
-            <p class="text-white/90 font-roboto text-lg">
-              Crystal-clear, high-resolution<br/> diagnostics
-            </p>
-          </div>
-
-          <!-- Treatment 3 -->
-          <div class="p-8 text-center h-full flex flex-col items-center">
-            <div class="w-16 h-16 mb-6 flex items-center justify-center">
-              <img
-                src="/homepage-img/teeth.png"
-                alt="Smile icon"
-                class="w-full h-full object-contain"
-              />
-            </div>
-            <h3 class="text-2xl font-semibold mb-4 font-roboto">
-              Smile<br/> Makeovers
-            </h3>
-            <p class="text-white/90 font-roboto text-lg">
-              Veneers, bonding, whitening for<br/> perfect smiles
-            </p>
-          </div>
-
-          <!-- Treatment 4 -->
-          <div class="p-8 text-center h-full flex flex-col items-center">
-            <div class="w-16 h-16 mb-6 flex items-center justify-center">
-              <img
-                src="/homepage-img/tooth-screw.png"
-                alt="Microscope icon"
-                class="w-full h-full object-contain"
-              />
-            </div>
-            <h3 class="text-2xl font-semibold mb-4 font-roboto">
-              Microscope-Assisted<br/> Painless RCT
-            </h3>
-            <p class="text-white/90 font-roboto text-lg">
-              Pinpoint precision with minimal<br/> discomfort
-            </p>
-          </div>
-
-          <!-- Treatment 5 -->
-          <div class="p-8 text-center h-full flex flex-col items-center">
-            <div class="w-16 h-16 mb-6 flex items-center justify-center">
-              <img
-                src="/homepage-img/scan.png"
-                alt="Crown icon"
-                class="w-full h-full object-contain"
-              />
-            </div>
-            <h3 class="text-2xl font-semibold mb-4 font-roboto">
-              Same-Day Crowns<br/> (CEREC CAD/CAM)
-            </h3>
-            <p class="text-white/90 font-roboto text-lg">
-              Custom crowns delivered in a<br/> single visit
-            </p>
-          </div>
-
-          <!-- Treatment 6 -->
-          <div class="p-8 text-center h-full flex flex-col items-center">
-            <div class="w-16 h-16 mb-6 flex items-center justify-center">
-              <img
-                src="/homepage-img/teeth-magnify.png"
-                alt="iTero scan icon"
-                class="w-full h-full object-contain"
-              />
-            </div>
-            <h3 class="text-2xl font-semibold mb-4 font-roboto">
-              iTero Digital<br/> Intraoral Scans
-            </h3>
-            <p class="text-white/90 font-roboto text-lg">
-              Real-time 3D scans for<br/> smile simulation
-            </p>
-          </div>
-
-          <!-- Treatment 7 -->
-          <div class="p-8 text-center h-full flex flex-col items-center">
-            <div class="w-16 h-16 mb-6 flex items-center justify-center">
-              <img
-                src="/homepage-img/only-teeth.png"
-                alt="Implant icon"
-                class="w-full h-full object-contain"
-              />
-            </div>
-            <h3 class="text-2xl font-semibold mb-4 font-roboto">
-              Single & Multiple<br/> Dental Implants
-            </h3>
-            <p class="text-white/90 font-roboto text-lg">
-              Strong, natural-looking<br/> replacements that last
-            </p>
-          </div>
-
-          <!-- Treatment 8 -->
-          <div class="p-8 text-center h-full flex flex-col items-center">
-            <div class="w-16 h-16 mb-6 flex items-center justify-center">
-              <img
-                src="/homepage-img/only-magnify-withteeth.png"
-                alt="Cancer screening icon"
-                class="w-full h-full object-contain"
-              />
-            </div>
-            <h3 class="text-2xl font-semibold mb-4 font-roboto">
-              Oral Cancer<br/> Screening
-            </h3>
-            <p class="text-white/90 font-roboto text-lg">
-              Early detection with CBCT<br/> & expert eyes
-            </p>
-          </div>
-        </div>
-
-        <div class="text-center mt-16">
-          <button
-            class="bg-[#D8C119] text-[#1E1C01] text-[#1E1C01] font-medium py-3 px-8 transition duration-300 text-lg font-roboto"
-          >
-            View All Treatments
-          </button>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section
-      class="relative bg-cover bg-center bg-no-repeat text-white pt-[112px] pb-[112px] pr-[64px] pl-[64px]"
-      style="
-        background-image: url('/homepage-img/testimonial-1.png');
-        height: 620px;
-        padding: 112px 64px;
-        opacity: 1;
-      "
-    >
-      <!-- Black overlay -->
-      <div class="absolute inset-0 bg-[#1E1C01] opacity-60"></div>
-
-      <!-- Content -->
-      <div
-        class="relative max-w-5xl mx-auto text-center space-y-6"
-        style="
-          font-weight: 500;
-          font-style: Medium;
-          font-size: 48px;
-          line-height: 120%;
-          letter-spacing: 0%;
-          text-align: center;
-        "
-      >
-        <h2 class="text-6xl font-baskervville font-medium mb-16">
-          Find a convenient date, make an<br />
-          appointment and transform your smile!
-        </h2>
-      </div>
-
-      <!-- Centered Button -->
-      <div class="relative mt-28 flex justify-center">
         <button
-          class="bg-[#D8C119] text-[#1E1C01] text-[#1E1C01] font-medium py-3 px-8 transition duration-300 text-lg font-roboto"
-        >
-          Book An Appointment
+          class="bg-[#D8C119] text-[#1E1C01] hover:text-[#D8C119] hover:bg-[#1E1C01] font-roboto font-semibold py-2 sm:py-3 px-6 sm:px-8 text-base sm:text-lg transition-colors">
+          Book Virtual Consult
         </button>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- What Makes Us Different Section -->
-    <section class="bg-white relative z-10 pt-[112px] pb-[112px] pr-[64px] pl-[64px]">
-      <!-- Background color at the bottom -->
-      <div class="absolute inset-x-0 bottom-0 h-[50%] bg-[#d7b31c] z-0"></div>
+  <!-- Why Trust Us Section -->
+  <section class="bg-white py-12 sm:py-16 md:py-20 lg:pt-[112px] lg:pb-[112px] px-4 sm:px-8 md:px-12 lg:px-[64px]">
+    <div class="container mx-auto">
+      <!-- Heading -->
+      <h2
+        class="text-3xl sm:text-4xl md:text-[42px] lg:text-[48px] font-semibold text-[#1A1A1A] text-center mb-8 sm:mb-12 md:mb-16 font-baskervville">
+        Why Global Patients Trust<br class="hidden sm:inline" />
+        Braces & Roots
+      </h2>
 
-      <div class="container mx-auto px-4 md:px-6 relative z-10">
-        <!-- Heading -->
-        <h2
-          class="text-4xl md:text-5xl font-baskervville text-center mb-6 font-semibold"
-        >
-          What Makes Us Different
-        </h2>
-        <p
-          class="text-center max-w-3xl mx-auto mb-16 md:mb-24 font-roboto text-lg md:text-[18px] leading-relaxed"
-        >
-          We invest in technology to save you time, reduce chair-time, and
-          <br class="hidden md:block" />
-          improve your overall treatment outcomes.
+      <!-- Benefits Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-10 lg:gap-12 mx-auto">
+        <!-- Globally Trained Doctors -->
+        <div class="flex flex-col items-center text-center p-4 sm:p-6">
+          <div class="text-[#D8C119] bg-opacity-10 flex items-center justify-center mb-4 sm:mb-6">
+            <img src="/internationalpage/globe-icon.png" alt="Globe"
+              class="w-14 h-14 sm:w-16 sm:h-16 md:w-[72px] md:h-[72px]" loading="lazy" />
+          </div>
+          <h3 class="text-xl sm:text-2xl md:text-[24px] text-[#1A1A1A] font-roboto font-semibold mb-3 sm:mb-4">
+            Globally <br />Trained Doctors
+          </h3>
+          <p class="text-sm sm:text-[15px] md:text-[16px] font-medium sm:font-semibold font-roboto">
+            Our core team has practiced and led departments<br class="hidden sm:inline" />
+            in Saudi Arabia and the UK, bringing global<br class="hidden sm:inline" />
+            expertise to your treatment journey.
+          </p>
+        </div>
+
+        <!-- Cutting-Edge Dental Technology -->
+        <div class="flex flex-col items-center text-center p-4 sm:p-6">
+          <div class="text-[#D8C119] bg-opacity-10 flex items-center justify-center mb-4 sm:mb-6">
+            <img src="/internationalpage/sheet-icon.png" alt="Technology"
+              class="w-14 h-14 sm:w-16 sm:h-16 md:w-[72px] md:h-[72px]" loading="lazy" />
+          </div>
+          <h3 class="text-xl sm:text-2xl md:text-[24px] text-[#1A1A1A] font-roboto font-semibold mb-3 sm:mb-4">
+            Cutting-Edge<br />
+            Dental Technology
+          </h3>
+          <p class="text-sm sm:text-[15px] md:text-[16px] font-medium sm:font-semibold font-roboto">
+            From CBCT scans to iTero smile simulations and<br class="hidden sm:inline" />
+            microscope-enhanced precision — we use the<br class="hidden sm:inline" />
+            world's best tools to treat you better.
+          </p>
+        </div>
+
+        <!-- 60%+ Cost Savings -->
+        <div class="flex flex-col items-center text-center p-4 sm:p-6">
+          <div class="text-[#D8C119] bg-opacity-10 flex items-center justify-center mb-4 sm:mb-6">
+            <img src="/internationalpage/dollar-icon.png" alt="Savings"
+              class="w-14 h-14 sm:w-16 sm:h-16 md:w-[72px] md:h-[72px]" loading="lazy" />
+          </div>
+          <h3 class="text-xl sm:text-2xl md:text-[24px] text-[#1A1A1A] font-roboto font-semibold mb-3 sm:mb-4">
+            60%+<br />
+            Cost Savings
+          </h3>
+          <p class="text-sm sm:text-[15px] md:text-[16px] font-medium sm:font-semibold font-roboto">
+            Receive advanced dental care at a fraction of<br class="hidden sm:inline" />
+            international costs — without ever compromising<br class="hidden sm:inline" />
+            on quality, comfort, or outcomes.
+          </p>
+        </div>
+
+        <!-- End-to-End Treatment Planning -->
+        <div class="flex flex-col items-center text-center p-4 sm:p-6">
+          <div class="text-[#D8C119] bg-opacity-10 flex items-center justify-center mb-4 sm:mb-6">
+            <img src="/internationalpage/globe-plane.png" alt="Planning"
+              class="w-14 h-14 sm:w-16 sm:h-16 md:w-[72px] md:h-[72px]" loading="lazy" />
+          </div>
+          <h3 class="text-xl sm:text-2xl md:text-[24px] text-[#1A1A1A] font-roboto font-semibold mb-3 sm:mb-4">
+            End-to-End<br />
+            Treatment Planning
+          </h3>
+          <p class="text-sm sm:text-[15px] md:text-[16px] font-medium sm:font-semibold font-roboto">
+            We provide a clear, personalized roadmap —
+            <br class="hidden sm:inline" />including treatment options,
+            timelines, and<br class="hidden sm:inline" />
+            transparent quotes — even before you fly in.
+          </p>
+        </div>
+
+        <!-- Full Travel Assistance -->
+        <div class="flex flex-col items-center text-center p-4 sm:p-6">
+          <div class="text-[#D8C119] bg-opacity-10 flex items-center justify-center mb-4 sm:mb-6">
+            <img src="/internationalpage/globe-icon.png" alt="Travel"
+              class="w-14 h-14 sm:w-16 sm:h-16 md:w-[72px] md:h-[72px]" loading="lazy" />
+          </div>
+          <h3 class="text-xl sm:text-2xl md:text-[24px] text-[#1A1A1A] font-roboto font-semibold mb-3 sm:mb-4">
+            Full<br />
+            Travel Assistance
+          </h3>
+          <p class="text-sm sm:text-[15px] md:text-[16px] font-medium sm:font-semibold font-roboto">
+            From hotel partnerships to airport pickup and<br class="hidden sm:inline" />
+            priority scheduling, we ensure your trip is smooth,<br class="hidden sm:inline" />
+            safe, and well-supported.
+          </p>
+        </div>
+
+        <!-- English-Speaking Team -->
+        <div class="flex flex-col items-center text-center p-4 sm:p-6">
+          <div class="text-[#D8C119] bg-opacity-10 flex items-center justify-center mb-4 sm:mb-6">
+            <img src="/internationalpage/message-cion.png" alt="Communication"
+              class="w-14 h-14 sm:w-16 sm:h-16 md:w-[72px] md:h-[72px]" loading="lazy" />
+          </div>
+          <h3 class="text-xl sm:text-2xl md:text-2xl text-[#1E1C01] font-baskervville font-semibold mb-3 sm:mb-4">
+            English-Speaking<br />
+            Team + WhatsApp Support
+          </h3>
+          <p class="text-sm sm:text-[15px] md:text-[16px] font-medium sm:font-semibold font-roboto">
+            Clear communication, real-time updates, and<br class="hidden sm:inline" />
+            responsive care — before, during, and after your<br class="hidden sm:inline" />
+            treatment.
+          </p>
+        </div>
+      </div>
+
+      <!-- View Treatments Button -->
+      <div class="text-center mt-12 sm:mt-16 md:mt-20 lg:mt-24">
+        <a href="#"
+          class="inline-block bg-[#1E1C01] hover:bg-[#D8C119] hover:text-[#1E1C01] text-[#D8C119] font-roboto font-medium py-2 sm:py-3 px-6 sm:px-8 sm:text-base transition-colors">
+          View Our Treatments
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dental Journey Section -->
+  <section class="bg-[#1E1C01] text-white py-16 md:py-24 lg:pt-[112px] lg:pb-[112px] px-6 md:px-12 lg:px-[64px]">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-16">
+      <!-- Heading -->
+      <h2 class="text-3xl md:text-4xl lg:text-5xl text-center mb-12 md:mb-16 font-baskervville font-semibold">
+        Your Dental Journey, Made Easy
+      </h2>
+
+      <!-- Row of Images - Mobile (2 columns) / Desktop (5 columns) -->
+      <div class="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-6 mb-8 md:mb-12 justify-items-center">
+        <!-- Step 1 Image -->
+        <div class="w-full max-w-[240px] md:max-w-[260px] aspect-square">
+          <img src="/internationalpage/image-7.png" alt="Step 1" class="w-full h-full object-contain" loading="lazy" />
+        </div>
+
+        <!-- Step 2 Image -->
+        <div class="w-full max-w-[240px] md:max-w-[260px] aspect-square">
+          <img src="/internationalpage/image-8.png" alt="Step 2" class="w-full h-full object-contain" loading="lazy" />
+        </div>
+
+        <!-- Step 3 Image -->
+        <div class="w-full max-w-[240px] md:max-w-[260px] aspect-square">
+          <img src="/internationalpage/image-9.jpg" alt="Step 3" class="w-full h-full object-contain" loading="lazy" />
+        </div>
+
+        <!-- Step 4 Image -->
+        <div class="w-full max-w-[240px] md:max-w-[260px] aspect-square">
+          <img src="/internationalpage/image-10.png" alt="Step 4" class="w-full h-full object-contain" loading="lazy" />
+        </div>
+
+        <!-- Step 5 Image -->
+        <div class="w-full max-w-[240px] md:max-w-[260px] aspect-square">
+          <img src="/internationalpage/image-11.png" alt="Step 5" class="w-full h-full object-contain" loading="lazy" />
+        </div>
+      </div>
+
+      <!-- Connecting Line with Dots (Desktop only) -->
+      <div class="hidden md:block relative mb-12">
+        <div class="absolute top-0 left-0 right-0 h-[3px] bg-[#D8C119] w-full mx-auto z-0"></div>
+        <!-- Dots -->
+        <div class="absolute top-[-5px] w-full flex justify-between px-16">
+          <div class="w-3 h-3 bg-[#D8C119] rounded-full"></div>
+          <div class="w-3 h-3 bg-[#D8C119] rounded-full"></div>
+          <div class="w-3 h-3 bg-[#D8C119] rounded-full"></div>
+          <div class="w-3 h-3 bg-[#D8C119] rounded-full"></div>
+          <div class="w-3 h-3 bg-[#D8C119] rounded-full"></div>
+        </div>
+      </div>
+
+      <!-- Journey Steps Grid - Mobile (1 column) / Desktop (5 columns) -->
+      <div class="grid grid-cols-1 md:grid-cols-5 gap-6 md:gap-8 mx-auto mt-12 md:mt-20">
+        <!-- Step 1 -->
+        <div class="flex flex-col items-center text-center">
+          <h3 class="text-xl md:text-2xl lg:text-[24px] font-baskervville font-bold mb-3 md:mb-4">
+            Consult from<br />Anywhere
+          </h3>
+          <p class="text-white font-roboto text-base md:text-[16px]">
+            Share X-rays or get on a<br class="hidden md:inline" />video call
+          </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="flex flex-col items-center text-center">
+          <h3 class="text-xl md:text-2xl lg:text-[24px] font-baskervville font-bold mb-3 md:mb-4">
+            Receive a<br />Personalized Plan
+          </h3>
+          <p class="text-white font-roboto text-base md:text-[16px]">
+            Transparent pricing and<br class="hidden md:inline" />timeline
+          </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="flex flex-col items-center text-center">
+          <h3 class="text-xl md:text-2xl lg:text-[24px] font-baskervville font-bold mb-3 md:mb-4">
+            Travel & Stay<br />Support
+          </h3>
+          <p class="text-white font-roboto text-base md:text-[16px]">
+            Help with hotels and<br class="hidden md:inline" />concierge
+            services
+          </p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="flex flex-col items-center text-center">
+          <h3 class="text-xl md:text-2xl lg:text-[24px] font-baskervville font-bold mb-3 md:mb-4">
+            Begin<br />Treatment
+          </h3>
+          <p class="text-white font-roboto text-base md:text-[16px]">
+            Priority scheduling,<br class="hidden md:inline" />comfortable
+            experience
+          </p>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="flex flex-col items-center text-center">
+          <h3 class="text-xl md:text-2xl lg:text-[24px] font-baskervville font-bold mb-3 md:mb-4">
+            Follow-up<br />from Abroad
+          </h3>
+          <p class="text-white font-roboto text-base md:text-[16px]">
+            Follow-up from<br class="hidden md:inline" />Abroad
+          </p>
+        </div>
+      </div>
+
+      <!-- Schedule Button -->
+      <div class="text-center mt-16 md:mt-24">
+        <button
+          class="bg-[#D8C119] text-[#1E1C01] hover:text-[#D8C119] hover:bg-[#1E1C01] hover:outline font-roboto font-medium py-3 px-8 rounded-none transition-colors">
+          Schedule a Free Call
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Most Chosen Treatments Section -->
+  <section class="py-12 sm:py-16 md:py-20 lg:pt-[112px] lg:pb-[112px] px-4 sm:px-8 md:px-12 lg:px-[64px]">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-16">
+      <!-- Heading -->
+      <h2
+        class="text-3xl sm:text-4xl md:text-[42px] lg:text-[48px] text-[#1E1C01] text-center mb-8 sm:mb-12 md:mb-16 font-baskervville font-semibold">
+        Most Chosen Treatments by<br class="hidden sm:inline" />
+        Our Global Patients
+      </h2>
+
+      <!-- Treatments Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mx-auto mb-8 sm:mb-12">
+        <!-- Smile Makeovers -->
+        <div class="w-full h-auto sm:h-[240px] md:h-[302px] transition-shadow overflow-hidden relative rounded-lg">
+          <img src="/internationalpage/image-1.png" alt="Smile Makeovers"
+            class="w-full h-[200px] sm:h-[240px] md:h-[240px] object-cover" loading="lazy" />
+          <div class="absolute bottom-0 left-0 right-0 bg-white h-[50px] sm:h-[62px] flex items-center px-4">
+            <h3 class="text-lg sm:text-xl md:text-[24px] text-[#1E1C01] font-baskervville font-bold">
+              Smile Makeovers
+            </h3>
+          </div>
+        </div>
+
+        <!-- Dental Implants -->
+        <div class="w-full h-auto sm:h-[240px] md:h-[302px] transition-shadow overflow-hidden relative rounded-lg">
+          <img src="/internationalpage/image-2.png" alt="Dental Implants"
+            class="w-full h-[200px] sm:h-[240px] md:h-[240px] object-cover" loading="lazy" />
+          <div class="absolute bottom-0 left-0 right-0 bg-white h-[50px] sm:h-[62px] flex items-center px-4">
+            <h3 class="text-lg sm:text-xl md:text-[24px] text-[#1E1C01] font-baskervville font-bold">
+              Dental Implants
+            </h3>
+          </div>
+        </div>
+
+        <!-- Invisible Braces -->
+        <div class="w-full h-auto sm:h-[240px] md:h-[302px] transition-shadow overflow-hidden relative rounded-lg">
+          <img src="/internationalpage/image-3.png" alt="Invisible Braces"
+            class="w-full h-[200px] sm:h-[240px] md:h-[240px] object-cover" loading="lazy" />
+          <div class="absolute bottom-0 left-0 right-0 bg-white h-[50px] sm:h-[62px] flex items-center px-4">
+            <h3 class="text-lg sm:text-xl md:text-[24px] text-[#1E1C01] font-baskervville font-bold">
+              Invisible Braces
+            </h3>
+          </div>
+        </div>
+
+        <!-- Full Mouth Rehabilitations -->
+        <div class="w-full h-auto sm:h-[240px] md:h-[302px] transition-shadow overflow-hidden relative rounded-lg">
+          <img src="/internationalpage/image-4.png" alt="Full Mouth Rehabilitations"
+            class="w-full h-[200px] sm:h-[240px] md:h-[240px] object-cover" loading="lazy" />
+          <div class="absolute bottom-0 left-0 right-0 bg-white h-[50px] sm:h-[62px] flex items-center px-4">
+            <h3 class="text-lg sm:text-xl md:text-[24px] text-[#1E1C01] font-baskervville font-bold">
+              Full Mouth Rehabilitations
+            </h3>
+          </div>
+        </div>
+
+        <!-- Pediatric Dentistry -->
+        <div class="w-full h-auto sm:h-[240px] md:h-[302px] transition-shadow overflow-hidden relative rounded-lg">
+          <img src="/internationalpage/image-5.png" alt="Pediatric Dentistry"
+            class="w-full h-[200px] sm:h-[240px] md:h-[240px] object-cover" loading="lazy" />
+          <div class="absolute bottom-0 left-0 right-0 bg-white h-[50px] sm:h-[62px] flex items-center px-4">
+            <h3 class="text-lg sm:text-xl md:text-[24px] text-[#1E1C01] font-baskervville font-bold">
+              Pediatric Dentistry
+            </h3>
+          </div>
+        </div>
+
+        <!-- Microscope Root Canal -->
+        <div class="w-full h-auto sm:h-[240px] md:h-[302px] transition-shadow overflow-hidden relative rounded-lg">
+          <img src="/internationalpage/image-6.png" alt="Microscope Root Canal"
+            class="w-full h-[200px] sm:h-[240px] md:h-[240px] object-cover" loading="lazy" />
+          <div class="absolute bottom-0 left-0 right-0 bg-white h-[50px] sm:h-[62px] flex items-center px-4">
+            <h3 class="text-lg sm:text-xl md:text-[24px] text-[#1E1C01] font-baskervville font-bold">
+              Microscope Root Canal
+            </h3>
+          </div>
+        </div>
+      </div>
+
+      <!-- View All Button -->
+      <div class="text-center mt-6 sm:mt-8">
+        <a href="#"
+          class="inline-block bg-[#1E1C01] text-[#D8C119] hover:text-[#1E1C01] hover:bg-[#D8C119] font-roboto font-medium py-2 sm:py-3 px-6 sm:px-8 sm:text-base transition-colors">
+          View All Treatments
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="bg-[#D8C1191A] relative overflow-hidden pt-[112px] pb-[112px] px-4 sm:px-2 lg:px-[64px]">
+    <!-- Background Watermark -->
+    <div class="absolute inset-0 flex items-center justify-center z-0 opacity-10">
+      <img src="/homepage-img/teeth-bg.png" alt="Background" class="w-[400px] md:w-[600px] h-auto object-contain" />
+    </div>
+
+    <!-- Container -->
+    <div class="container mx-auto px-4 md:px-6 relative z-10">
+      <!-- Heading -->
+      <h2 class="text-3xl sm:text-4xl md:text-[48px] font-semibold text-center mb-12 font-baskervville leading-tight">
+        They Came from Miles <br class="hidden md:block" />
+        Away — And Left Smiling
+      </h2>
+
+      <!-- Scrollable Testimonials -->
+      <div class="relative">
+        <!-- Left Arrow -->
+        <button onclick="scrollTestimonials(-1)"
+          class="hidden md:flex absolute -left-6 top-1/2 transform -translate-y-1/2 bg-white border border-[#d7b31c] text-[#d7b31c] rounded-full w-10 h-10 items-center justify-center shadow-md z-20">
+          &#8592;
+        </button>
+
+        <!-- Testimonial Cards Row -->
+        <div id="testimonialSlider" class="flex overflow-x-auto scroll-smooth gap-6 mt-24 md:mt-32 no-scrollbar">
+          <!-- Individual Testimonial -->
+          <div class="min-w-[280px] sm:min-w-[300px] max-w-sm bg-white p-6 shadow-xl shrink-0 rounded-lg">
+            <div class="text-yellow-400 text-lg mb-4">★★★★★</div>
+            <p class="italic mb-6 text-gray-700">
+              "I flew in from the UK for a smile makeover. Dr. Ayesha and team
+              gave me perfect results in just six days. Absolutely world-class
+              care."
+            </p>
+            <div class="flex items-center gap-3">
+              <img src="https://randomuser.me/api/portraits/women/65.jpg" class="w-10 h-10 rounded-full" />
+              <div>
+                <p class="font-semibold">Farah S., London</p>
+                <p class="text-sm text-gray-500">Marketing Professional</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Repeat for other testimonials -->
+          <!-- Testimonial 2 -->
+          <div class="min-w-[280px] sm:min-w-[300px] max-w-sm bg-white p-6 shadow-xl shrink-0 rounded-lg">
+            <div class="text-yellow-400 text-lg mb-4">★★★★★</div>
+            <p class="italic mb-6 text-gray-700">
+              "Never imagined a root canal could be this painless. The
+              microscope made all the difference."
+            </p>
+            <div class="flex items-center gap-3">
+              <img src="https://randomuser.me/api/portraits/men/32.jpg" class="w-10 h-10 rounded-full" />
+              <div>
+                <p class="font-semibold">Rohit V., Hyderabad</p>
+                <p class="text-sm text-gray-500">Software Engineer</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Add remaining testimonials similarly -->
+          <!-- Testimonial 3 -->
+          <div class="min-w-[280px] sm:min-w-[300px] max-w-sm bg-white p-6 shadow-xl shrink-0 rounded-lg">
+            <div class="text-yellow-400 text-lg mb-4">★★★★★</div>
+            <p class="italic mb-6 text-gray-700">
+              "The hospitality, the hygiene, the staff—everything was 10/10. I
+              got my smile in just 2 days!"
+            </p>
+            <div class="flex items-center gap-3">
+              <img src="https://randomuser.me/api/portraits/women/88.jpg" class="w-10 h-10 rounded-full" />
+              <div>
+                <p class="font-semibold">Meera R., Dubai</p>
+                <p class="text-sm text-gray-500">Entrepreneur</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 4 -->
+          <div class="min-w-[280px] sm:min-w-[300px] max-w-sm bg-white p-6 shadow-xl shrink-0 rounded-lg">
+            <div class="text-yellow-400 text-lg mb-4">★★★★★</div>
+            <p class="italic mb-6 text-gray-700">
+              "My kids love visiting the clinic now! It's bright, clean, and
+              the doctors are amazing with children."
+            </p>
+            <div class="flex items-center gap-3">
+              <img src="https://randomuser.me/api/portraits/women/33.jpg" class="w-10 h-10 rounded-full" />
+              <div>
+                <p class="font-semibold">Priya D., Hyderabad</p>
+                <p class="text-sm text-gray-500">Mother of Two</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 5 -->
+          <div class="min-w-[280px] sm:min-w-[300px] max-w-sm bg-white p-6 shadow-xl shrink-0 rounded-lg">
+            <div class="text-yellow-400 text-lg mb-4">★★★★★</div>
+            <p class="italic mb-6 text-gray-700">
+              "From consultation to final smile, everything was so smooth.
+              Highly recommend!"
+            </p>
+            <div class="flex items-center gap-3">
+              <img src="https://randomuser.me/api/portraits/men/29.jpg" class="w-10 h-10 rounded-full" />
+              <div>
+                <p class="font-semibold">Ankit G., Pune</p>
+                <p class="text-sm text-gray-500">Startup Founder</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Arrow -->
+        <button onclick="scrollTestimonials(1)"
+          class="hidden md:flex absolute -right-6 top-1/2 transform -translate-y-1/2 bg-white border border-[#d7b31c] text-[#d7b31c] rounded-full w-10 h-10 items-center justify-center shadow-md z-20">
+          &#8594;
+        </button>
+      </div>
+
+      <!-- CTA -->
+      <div class="text-center mt-16 mb-12">
+        <p class="mb-6 font-baskervville font-semibold text-xl sm:text-2xl">
+          Ready to transform your smile? Book your appointment today.
         </p>
-
-        <!-- Cards Grid -->
-        
-          <!-- Cards Grid -->
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 -mt-10">
-  <!-- Card 1 -->
-  <div class="bg-[#1E1C01] text-white p-8 md:p-10 text-center">
-    <div class="w-20 h-20 mx-auto mb-6 flex items-center justify-center">
-      <img src="/homepage-img/box.png" alt="Icon" class="w-16 h-16 object-contain" />
-    </div>
-    <h3 class="text-2xl font-bold mb-6 font-baskervville">
-      Globally Trained Experts
-    </h3>
-    <p class="font-roboto text-white/90">
-      Led by doctors with experience in Saudi Arabia and India's best
-      institutions, bringing global care home.
-    </p>
-  </div>
-
-  <!-- Card 2 -->
-  <div class="bg-[#1E1C01] text-white p-8 md:p-10 text-center">
-    <div class="w-20 h-20 mx-auto mb-6 flex items-center justify-center">
-      <img src="/homepage-img/box.png" alt="Icon" class="w-16 h-16 object-contain" />
-    </div>
-    <h3 class="text-2xl font-bold mb-6 font-baskervville">
-      Technology-Led Treatments
-    </h3>
-    <p class="font-roboto text-white/90">
-      CBCT, iTero scans, microscope RCTs, and CAD/CAM same-day crowns
-      for faster, more precise results.
-    </p>
-  </div>
-
-  <!-- Card 3 -->
-  <div class="bg-[#1E1C01] text-white p-8 md:p-10 text-center">
-    <div class="w-20 h-20 mx-auto mb-6 flex items-center justify-center">
-      <img src="/homepage-img/box.png" alt="Icon" class="w-16 h-16 object-contain" />
-    </div>
-    <h3 class="text-2xl font-bold mb-6 font-baskervville">
-      A Spa-Inspired Experience
-    </h3>
-    <p class="font-roboto text-white/90">
-      Private zones, soothing interiors, and transparent care redefine
-      how patients experience dentistry.
-    </p>
-  </div>
-</div>
-
-
-        <!-- Button -->
-        <div class="text-center mt-16 md:mt-24 mb-12">
-          <button
-            class="bg-[#1E1C01] hover:bg-[#2A2800] font-roboto text-[#D8C119] font-medium py-3 px-8"
-          >
-            Contact Us
-          </button>
-        
+        <button
+          class="bg-[#D8C119] text-[#1E1C01] hover:text-[#D8C119] hover:bg-[#1E1C01] font-roboto py-3 px-8 font-semibold transition duration-300 ">
+          Book An Appointment!
+        </button>
       </div>
-    </section>
+    </div>
+  </section>
 
-    
-<!-- Testimonials Section -->
-<section class=" bg-white relative overflow-hidden pt-[112px] pb-[112px] pr-[64px] pl-[64px]">
-  <!-- Background Watermark -->
-   <div class="absolute inset-0 flex items-center justify-center z-0 opacity-10">
-    <img
-      src="/homepage-img/teeth-bg.png"
-      alt="Background"
-      class="w-[600px] h-auto object-contain"
-    />
-  </div>
+  <!-- Planning Section with Integrated Icons -->
+  <section class="relative bg-cover bg-center bg-no-repeat text-white pt-[80px] pb-[112px] px-4 sm:px-8 lg:px-[64px]"
+    style="background-image: url('/homepage-img/testimonial-1.png')">
+    <!-- Black overlay -->
+    <div class="absolute inset-0 bg-[#1E1C01] opacity-60 z-0"></div>
 
-  <!-- Container -->
-  <div class="container mx-auto px-4 md:px-6 relative z-10">
-    
-    <!-- Heading -->
-    <h2 class="text-3xl text-[48px] font-semibold text-center mb-12 font-baskervville">
-      What do our patients say<br class="hidden md:block" />
-      about us?
-    </h2>
-
-    <!-- Scrollable Testimonials -->
-    <div class="relative">
-      <!-- Left Arrow -->
-      <button
-        onclick="scrollTestimonials(-1)"
-        class="hidden md:flex absolute -left-6 top-1/2 transform -translate-y-1/2 bg-white border border-[#d7b31c] text-[#d7b31c] rounded-full w-10 h-10 items-center justify-center shadow-md z-20"
-      >
-        &#8592;
-      </button>
-
-      <!-- Scrollable Flex Row -->
-      <div
-        id="testimonialSlider"
-        class="flex overflow-x-auto no-scrollbar scroll-smooth gap-6 mt-48"
-      >
-        <!-- Testimonial 1 -->
-        <div class="min-w-[350px] max-w-sm bg-white p-6 shadow-xl rounded-md shrink-0">
-          <div class="text-yellow-400 text-lg mb-4">★★★★★</div>
-          <p class="italic mb-6 text-gray-700">
-            "I flew in from the UK for a smile makeover. Dr. Ayesha and team gave me perfect results in just six days. Absolutely world-class care."
-          </p>
-          <div class="flex items-center gap-3">
-            <img src="https://randomuser.me/api/portraits/women/65.jpg" class="w-10 h-10 rounded-full" />
-            <div>
-              <p class="font-semibold">Farah S., London</p>
-              <p class="text-sm text-gray-500">Marketing Professional</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Testimonial 2 -->
-        <div class="min-w-[300px] max-w-sm bg-white p-6 shadow-xl rounded-md shrink-0">
-          <div class="text-yellow-400 text-lg mb-4">★★★★★</div>
-          <p class="italic mb-6 text-gray-700">
-            "Never imagined a root canal could be this painless. The microscope made all the difference."
-          </p>
-          <div class="flex items-center gap-3">
-            <img src="https://randomuser.me/api/portraits/men/32.jpg" class="w-10 h-10 rounded-full" />
-            <div>
-              <p class="font-semibold">Rohit V., Hyderabad</p>
-              <p class="text-sm text-gray-500">Software Engineer</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Testimonial 3 -->
-        <div class="min-w-[300px] max-w-sm bg-white p-6 shadow-xl rounded-md shrink-0">
-          <div class="text-yellow-400 text-lg mb-4">★★★★★</div>
-          <p class="italic mb-6 text-gray-700">
-            "The hospitality, the hygiene, the staff—everything was 10/10. I got my smile in just 2 days!"
-          </p>
-          <div class="flex items-center gap-3">
-            <img src="https://randomuser.me/api/portraits/women/88.jpg" class="w-10 h-10 rounded-full" />
-            <div>
-              <p class="font-semibold">Meera R., Dubai</p>
-              <p class="text-sm text-gray-500">Entrepreneur</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Testimonial 4 -->
-        <div class="min-w-[300px] max-w-sm bg-white p-6 shadow-xl rounded-md shrink-0">
-          <div class="text-yellow-400 text-lg mb-4">★★★★★</div>
-          <p class="italic mb-6 text-gray-700">
-            "My kids love visiting the clinic now! It's bright, clean, and the doctors are amazing with children."
-          </p>
-          <div class="flex items-center gap-3">
-            <img src="https://randomuser.me/api/portraits/women/33.jpg" class="w-10 h-10 rounded-full" />
-            <div>
-              <p class="font-semibold">Priya D., Hyderabad</p>
-              <p class="text-sm text-gray-500">Mother of Two</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Testimonial 5 -->
-        <div class="min-w-[300px] max-w-sm bg-white p-6 shadow-xl rounded-md shrink-0">
-          <div class="text-yellow-400 text-lg mb-4">★★★★★</div>
-          <p class="italic mb-6 text-gray-700">
-            "From consultation to final smile, everything was so smooth. Highly recommend!"
-          </p>
-          <div class="flex items-center gap-3">
-            <img src="https://randomuser.me/api/portraits/men/29.jpg" class="w-10 h-10 rounded-full" />
-            <div>
-              <p class="font-semibold">Ankit G., Pune</p>
-              <p class="text-sm text-gray-500">Startup Founder</p>
-            </div>
-          </div>
-        </div>
+    <!-- Content Container -->
+    <div class="relative z-10 mx-auto">
+      <!-- Heading -->
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-[48px] font-baskervville font-medium leading-tight">
+          Need Help Planning Your Trip?<br />
+          We've Got You.
+        </h2>
       </div>
 
-      <!-- Right Arrow -->
-      <button
-        onclick="scrollTestimonials(1)"
-        class="hidden md:flex absolute -right-6 top-1/2 transform -translate-y-1/2 bg-white border border-[#d7b31c] text-[#d7b31c] rounded-full w-10 h-10 items-center justify-center shadow-md z-20"
-      >
-        &#8594;
-      </button>
-    </div>
+      <!-- Icons Row -->
+      <div class="flex flex-wrap justify-center gap-y-12 gap-x-6 md:gap-x-12 lg:gap-x-28">
+        <!-- Icon Block -->
+        <div class="flex flex-col items-center w-[160px] sm:w-[180px] md:w-[205px]">
+          <div class="p-4 mb-3">
+            <img src="internationalpage/plane-icon.png" alt="Closest Airport"
+              class="w-[64px] sm:w-[72px] h-[64px] sm:h-[72px]" />
+          </div>
+          <p class="text-center font-baskervville font-semibold text-[18px] sm:text-[20px]">
+            Closest Airport:<br />
+            Hyderabad
+          </p>
+        </div>
 
-    <!-- Bottom CTA -->
-    <div class="text-center mt-16 mb-24">
-      <p class="mb-12 font-baskervville font-semibold text-[24px]">
-        Ready to transform your smile? Book your appointment today.
+        <!-- Hotel Partners -->
+        <div class="flex flex-col items-center w-[160px] sm:w-[180px] md:w-[205px]">
+          <div class="p-4 mb-3">
+            <img src="internationalpage/hotel-icon.png" alt="Hotel Partners"
+              class="w-[64px] sm:w-[72px] h-[64px] sm:h-[72px]" />
+          </div>
+          <p class="text-center font-baskervville font-semibold text-[18px] sm:text-[20px]">
+            Trusted<br />
+            Hotel Partners
+          </p>
+        </div>
+
+        <!-- Pickup & Drop -->
+        <div class="flex flex-col items-center w-[160px] sm:w-[180px] md:w-[205px]">
+          <div class="p-4 mb-3">
+            <img src="internationalpage/global-icon.png" alt="Pickup & Drop"
+              class="w-[64px] sm:w-[72px] h-[64px] sm:h-[72px]" />
+          </div>
+          <p class="text-center font-baskervville font-semibold text-[18px] sm:text-[20px]">
+            Optional<br />
+            Pickup & Drop
+          </p>
+        </div>
+
+        <!-- NRI-friendly Coordination -->
+        <div class="flex flex-col items-center w-[160px] sm:w-[180px] md:w-[205px]">
+          <div class="p-4 mb-3">
+            <img src="internationalpage/map-icon.png" alt="NRI Packages"
+              class="w-[64px] sm:w-[72px] h-[64px] sm:h-[72px]" />
+          </div>
+          <p class="text-center font-baskervville font-semibold text-[18px] sm:text-[20px]">
+            NRI-friendly Packages <br />& Coordination
+          </p>
+        </div>
+
+        <!-- WhatsApp Liaison -->
+        <div class="flex flex-col items-center w-[160px] sm:w-[180px] md:w-[205px]">
+          <div class="p-4 mb-3">
+            <img src="internationalpage/whatsapp-icon.png" alt="WhatsApp Liaison"
+              class="w-[64px] sm:w-[72px] h-[64px] sm:h-[72px]" />
+          </div>
+          <p class="text-center font-baskervville font-semibold text-[18px] sm:text-[20px]">
+            Dedicated Patient<br />
+            Liaison on WhatsApp
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQs Section -->
+  <section class="text-black pt-[112px] pb-[112px] px-4 sm:px-6 md:px-8 lg:px-[64px]">
+    <div class="container mx-auto px-4 md:px-16">
+      <!-- Heading -->
+      <h2 class="text-3xl md:text-5xl font-baskervville font-bold text-center mb-8">
+        Frequently Asked Questions
+      </h2>
+      <p class="text-center mb-28 text-lg font-roboto">
+        Our customer support team is here to assist you. Start by browsing our
+        FAQ section to find answers to your questions.
       </p>
-      <button
-        class="bg-[#1E1C01] text-[#D8C119] font-roboto py-3 px-8 font-semibold transition duration-300"
-      >
-        Book An Appointment!
-      </button>
-    </div>
-  </div>
-</section>
 
-
-<!-- FAQs Section -->
-<section class="bg-[#fdf7e2] text-black pt-[112px] pb-[112px] pr-[64px] pl-[64px]">
-  <div class="container mx-auto px-4 md:px-16">
-    <!-- Heading -->
-    <h2 class="text-4xl md:text-5xl font-baskervville font-bold text-center mb-8">
-      Frequently Asked Questions
-    </h2>
-    <p class="text-center mb-28 text-lg font-roboto">
-      Our customer support team is here to assist you. Start by browsing our
-      FAQ section to find answers to your questions.
-    </p>
-
-    <!-- Accordion -->
-    <div class="space-y-4">
-      <!-- Custom style for the arrow -->
+      <!-- Custom arrow styling -->
       <style>
         details summary {
           list-style: none;
           cursor: pointer;
           position: relative;
-          padding-right: 40px; /* Increased for icon space */
+          padding-right: 40px;
         }
+
         details summary::-webkit-details-marker {
           display: none;
         }
+
         details summary:after {
           content: "";
           position: absolute;
@@ -690,309 +786,150 @@
           transform: translateY(-50%);
           width: 24px;
           height: 24px;
-          background-image: url('homepage-img/Vector-down.png');
+          background-image: url("/homepage-img/Vector-down.png");
           background-repeat: no-repeat;
           background-position: center;
           transition: transform 0.2s ease;
         }
+
         details[open] summary:after {
-          background-image: url('homepage-img/Vector-up.png');
+          background-image: url("/homepage-img/Vector-up.png");
         }
       </style>
 
-      <!-- FAQ Items -->
-      <details class="border-b border-black pb-8">
-        <summary class="font-semibold text-lg font-baskervville">
-          Do you offer painless dental treatments?
-        </summary>
-        <p class="mt-2 text-gray-800 font-roboto">
-          Yes! We use advanced tools like microscopes, digital scanners, and pain-free anesthesia techniques to ensure a comfortable, stress-free experience.
-        </p>
-      </details>
-
-      <details class="border-b border-black pb-8">
-        <summary class="font-semibold text-lg font-baskervville">
-          What technologies do you use during treatments?
-        </summary>
-        <p class="mt-2 text-gray-800 font-roboto">
-          We use CBCT, iTero scans, microscope RCTs, CAD/CAM crowns, and other advanced tools to deliver precision and speed.
-        </p>
-      </details>
-
-      <details class="border-b border-black pb-8">
-        <summary class="font-semibold text-lg font-baskervville">
-          How can I book an appointment?
-        </summary>
-        <p class="mt-2 text-gray-800 font-roboto">
-          You can book an appointment online through our website or contact our clinic directly via phone or WhatsApp.
-        </p>
-      </details>
-
-      <details class="border-b border-black pb-8">
-        <summary class="font-semibold text-lg font-baskervville">
-          Is digital smile design available at your clinic?
-        </summary>
-        <p class="mt-2 text-gray-800 font-roboto">
-          Yes, our clinic offers digital smile design consultations using state-of-the-art imaging and planning software.
-        </p>
-      </details>
-
-      <details class="border-b border-black pb-8">
-        <summary class="font-semibold text-lg font-baskervville">
-          How long does a smile makeover take?
-        </summary>
-        <p class="mt-2 text-gray-800 font-roboto">
-          It depends on your treatment plan. Some patients may complete treatment in one visit, while others may take a few weeks.
-        </p>
-      </details>
-
-      <details class="border-b border-black pb-8">
-        <summary class="font-semibold text-lg font-baskervville">
-          Do you treat children and elderly patients?
-        </summary>
-        <p class="mt-2 text-gray-800 font-roboto">
-          Absolutely! Our clinic is family-friendly and equipped to handle dental needs across all age groups.
-        </p>
-      </details>
-
-      <details class="border-b border-black pb-8">
-        <summary class="font-semibold text-lg font-baskervville">
-          What safety measures do you follow post-COVID?
-        </summary>
-        <p class="mt-2 text-gray-800 font-roboto">
-          We maintain strict sterilization protocols, use PPE kits, and follow all health guidelines to ensure maximum safety for our patients and staff.
-        </p>
-      </details>
-
-      <details class="border-b border-black pb-8">
-        <summary class="font-semibold text-lg font-baskervville">
-          Do you provide EMI or flexible payment options?
-        </summary>
-        <p class="mt-2 text-gray-800 font-roboto">
-          Yes, we offer EMI options for eligible treatments. Please speak to our front desk for more details.
-        </p>
-      </details>
-    </div>
-
-    <!-- CTA -->
-    <div class="max-w-4xl mx-auto text-center mt-24">
-      <h2 class="text-3xl font-bold mb-6 font-baskervville">
-        Still have questions?
-      </h2>
-      <p class="mb-8 font-roboto">
-        Reach out, and we'll be happy to help.
-      </p>
-      <button
-        class="bg-[#1E1C01] hover:bg-[#2A2800] font-roboto text-[#D8C119] font-semibold py-3 px-8"
-      >
-        Contact Us
-      </button>
-    </div>
-  </div>
-</section>
-
-
-   <!-- Blog Section -->
-<section class="bg-gray-50 pt-[112px] pb-[112px] pr-[64px] pl-[64px]">
-  <div class="container mx-auto px-16">
-    <div class="flex justify-between items-center mb-8">
-      <h2 class="text-3xl font-semibold font-baskervville text-[48px] text-gray-800 leading-relaxed">
-        Insights to Help You<br />Smile Smarter
-      </h2>
-      <button
-        class="bg-[#1E1C01] hover:bg-[#2A2800] font-roboto text-[#D8C119] font-semibold py-3 px-8 transition duration-300"
-      >
-        View all
-      </button>
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-      <!-- Blog 1 -->
-      <div class="bg-white border border-[#D8C119] overflow-hidden transition duration-300">
-        <img
-          src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
-          alt="Same-Day Crowns"
-          class="w-full h-60 object-cover"
-        />
-        <div class="p-6">
-          <h3 class="text-xl font-semibold mb-3 text-gray-800 font-baskervville text-[24px]">
-            The Power of Same-Day Crowns: Faster Smiles, Better Outcomes
-          </h3>
-          <p class="text-black mb-4 text-[16px] font-regular font-roboto">
-            Discover how CEREC CAD/CAM technology is transforming dental visits. Say goodbye to temporary crowns and hello to precise.
+      <!-- Accordion Items -->
+      <div class="space-y-4">
+        <details class="border-b border-black pb-8">
+          <summary class="font-semibold text-lg font-baskervville">
+            Do you offer painless dental treatments?
+          </summary>
+          <p class="mt-2 text-gray-800 font-roboto">
+            Yes! We use advanced tools like microscopes, digital scanners, and
+            pain-free anesthesia techniques to ensure a comfortable,
+            stress-free experience.
           </p>
-          <div class="mt-6">
-            <a
-              href="https://www.cerec.com/"
-              class="text-[#D8C119] font-medium hover:underline flex items-center font-roboto"
-            >
-              Read more <span class="ml-1">→</span>
-            </a>
-          </div>
-        </div>
+        </details>
+
+        <details class="border-b border-black pb-8">
+          <summary class="font-semibold text-lg font-baskervville">
+            What technologies do you use during treatments?
+          </summary>
+          <p class="mt-2 text-gray-800 font-roboto">
+            We use CBCT, iTero scans, microscope RCTs, CAD/CAM crowns, and
+            other advanced tools to deliver precision and speed.
+          </p>
+        </details>
+
+        <details class="border-b border-black pb-8">
+          <summary class="font-semibold text-lg font-baskervville">
+            How can I book an appointment?
+          </summary>
+          <p class="mt-2 text-gray-800 font-roboto">
+            You can book an appointment online through our website or contact
+            our clinic directly via phone or WhatsApp.
+          </p>
+        </details>
+
+        <details class="border-b border-black pb-8">
+          <summary class="font-semibold text-lg font-baskervville">
+            Is digital smile design available at your clinic?
+          </summary>
+          <p class="mt-2 text-gray-800 font-roboto">
+            Yes, our clinic offers digital smile design consultations using
+            state-of-the-art imaging and planning software.
+          </p>
+        </details>
+
+        <details class="border-b border-black pb-8">
+          <summary class="font-semibold text-lg font-baskervville">
+            How long does a smile makeover take?
+          </summary>
+          <p class="mt-2 text-gray-800 font-roboto">
+            It depends on your treatment plan. Some patients may complete
+            treatment in one visit, while others may take a few weeks.
+          </p>
+        </details>
+
+        <details class="border-b border-black pb-8">
+          <summary class="font-semibold text-lg font-baskervville">
+            Do you treat children and elderly patients?
+          </summary>
+          <p class="mt-2 text-gray-800 font-roboto">
+            Absolutely! Our clinic is family-friendly and equipped to handle
+            dental needs across all age groups.
+          </p>
+        </details>
+
+        <details class="border-b border-black pb-8">
+          <summary class="font-semibold text-lg font-baskervville">
+            What safety measures do you follow post-COVID?
+          </summary>
+          <p class="mt-2 text-gray-800 font-roboto">
+            We maintain strict sterilization protocols, use PPE kits, and
+            follow all health guidelines to ensure maximum safety for our
+            patients and staff.
+          </p>
+        </details>
+
+        <details class="border-b border-black pb-8">
+          <summary class="font-semibold text-lg font-baskervville">
+            Do you provide EMI or flexible payment options?
+          </summary>
+          <p class="mt-2 text-gray-800 font-roboto">
+            Yes, we offer EMI options for eligible treatments. Please speak to
+            our front desk for more details.
+          </p>
+        </details>
       </div>
 
-      <!-- Blog 2 -->
-      <div class="bg-white border border-[#D8C119] overflow-hidden transition duration-300">
-        <img
-          src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
-          alt="Dental Tourism"
-          class="w-full h-60 object-cover"
-        />
-        <div class="p-6">
-          <h3 class="text-xl font-semibold mb-3 text-gray-800 font-baskervville text-[24px]">
-            Dental Tourism in Hyderabad: Why Patients Are Flying In for Their...
-          </h3>
-          <p class="text-black mb-4 text-[16px] font-regular font-roboto">
-            Hyderabad is emerging as a top destination for global dental care. Explore the reasons why Braces & Roots is a preferred.
-          </p>
-          <div class="mt-6">
-            <a
-              href="#"
-              class="text-[#D8C119] font-medium hover:underline flex items-center font-roboto"
-            >
-              Read more <span class="ml-1">→</span>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Blog 3 -->
-      <div class="bg-white border border-[#D8C119] overflow-hidden transition duration-300">
-        <img
-          src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
-          alt="Microscope Dentistry"
-          class="w-full h-60 object-cover"
-        />
-        <div class="p-6">
-          <h3 class="text-xl font-semibold mb-3 text-gray-800 font-baskervville text-[24px]">
-            What is Microscope Dentistry (And Why It Matters)?
-          </h3>
-          <p class="text-black mb-4 text-[16px] font-regular font-roboto">
-            Precision, less pain, and better outcomes — learn how this advanced tool helps in complex root canals.
-          </p>
-          <div class="mt-6">
-            <a
-              href="#"
-              class="text-[#D8C119] font-medium hover:underline flex items-center font-roboto"
-            >
-              Read more <span class="ml-1">→</span>
-            </a>
-          </div>
-        </div>
+      <!-- CTA Section -->
+      <div class="max-w-4xl mx-auto text-center mt-24">
+        <h2 class="text-3xl font-bold mb-6 font-baskervville">
+          Still have questions?
+        </h2>
+        <p class="mb-8 font-roboto">Reach out, and we'll be happy to help.</p>
+        <button
+          class="bg-[#D8C119] text-[#1E1C01] hover:text-[#D8C119] hover:bg-[#1E1C01] font-roboto font-medium py-3 px-8 transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[#D8C119] focus:ring-offset-2">
+          Contact Us
+        </button>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-    <!-- Appointment Form Section -->
-<section class="relative pt-[112px] pb-[112px] pr-[64px] pl-[64px]">
-  <!-- Background Image -->
-  <div class="absolute inset-0 z-0">
-    <img
-      src="/homepage-img/testimonial-1.png"
-      alt="Dental clinic background"
-      class="w-full h-full object-cover"
-      loading="lazy"
-    />
-    <!-- Yellow overlay -->
-    <div class="absolute inset-0 bg-[#D8C119] bg-opacity-20 z-10"></div>
-  </div>
-
-  <!-- Black overlay above yellow tint -->
-  <div class="absolute inset-0 bg-[#1E1C01] opacity-60 z-20"></div>
+  <!-- Responsive CTA Section -->
+<section class="relative bg-cover bg-center bg-no-repeat text-white pt-16 md:pt-[112px] pb-16 md:pb-[112px] px-6 md:px-[64px] h-auto md:h-[350px]"
+  style="background-image: url('/homepage-img/testimonial-1.png')">
+  <!-- Black overlay -->
+  <div class="absolute inset-0 bg-[#1E1C01] opacity-60"></div>
 
   <!-- Content Container -->
-  <div class="container mx-auto px-4 relative z-30">
-    <div class="max-w-4xl mx-auto   p-8 md:p-12 rounded-lg">
-
-      <h2 class="text-3xl md:text-4xl text-center text-white mb-8 font-baskervville font-semibold">
-        Book an Appointment
+  <div class="relative max-w-5xl mx-auto text-center flex flex-col justify-center h-full">
+    <!-- Text Content with responsive spacing -->
+    <div class="space-y-4 md:space-y-6">
+      <h2 class="text-2xl sm:text-3xl md:text-[38px] font-baskervville font-medium leading-tight md:leading-[1.2] mb-8 md:mb-12">
+        Advanced tech. Precise, comfortable, clear — from day one.
       </h2>
-      <p class="text-white text-center mb-6 font-roboto text-lg mb-24">
-        Leave your details and we will contact you<br/> as soon as possible!
-      </p>
+    </div>
 
-      
-
-      <form class="space-y-6 mt-24">
-        <div>
-          <label class="block text-white mb-2 font-roboto font-medium">Name</label>
-          <input
-            type="text"
-            class="w-full bg-transparent px-4 py-3 border border-gray-300  focus:outline-none focus:ring-2 focus:ring-[#D8C119] focus:border-transparent font-roboto"
-            placeholder="Your name"
-            required
-          />
-        </div>
-
-        <div>
-          <label class="block text-white mb-2 font-roboto font-medium">Phone Number</label>
-          <input
-            type="tel"
-            class="w-full bg-transparent px-4 py-3 border border-gray-300  focus:outline-none focus:ring-2 focus:ring-[#D8C119] focus:border-transparent font-roboto"
-            placeholder="Your phone number"
-            required
-          />
-        </div>
-
-        <div>
-          <label class="block text-white mb-2 font-roboto font-medium">Preferred Date</label>
-          <input
-            type="date"
-            class="w-full bg-transparent px-4 py-3 border border-gray-300  focus:outline-none focus:ring-2 focus:ring-[#D8C119] focus:border-transparent font-roboto"
-            required
-          />
-        </div>
-
-        <div>
-          <label class="block text-white mb-2 font-roboto font-medium">Treatment Interest</label>
-          <select class="w-full bg-transparent px-4 py-3 border border-gray-300  focus:outline-none focus:ring-2 focus:ring-[#D8C119] focus:border-transparent font-roboto">
-            <option value="">Select treatment</option>
-            <option value="checkup">Digital Full-Mouth Check-up</option>
-            <option value="scans">3D CBCT Scans</option>
-            <option value="smile">Smile Makeover</option>
-            <option value="rct">Microscope-Assisted RCT</option>
-          </select>
-        </div>
-
-        <div class="flex items-center">
-          <input
-            type="checkbox"
-            id="terms"
-            class="mr-2 h-5 w-5 text-[#D8C119] focus:ring-[#D8C119] "
-            required
-          />
-          <label for="terms" class="text-white font-roboto">
-            I agree to the <a href="#" class="underline hover:underline">Terms</a>
-          </label>
-        </div>
-
-        <div class="text-center pt-4">
-          <button
-            type="submit"
-            class="bg-[#D8C119] hover:bg-[#E8D44D] text-[#1E1C01] font-roboto font-medium py-3 px-8  transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[#D8C119] focus:ring-offset-2"
-          >
-            Submit
-          </button>
-        </div>
-      </form>
+    <!-- Centered Button with responsive sizing -->
+    <div class="mt-8 md:mt-16 flex justify-center">
+      <button
+        class="bg-[#D8C119] text-[#1E1C01] hover:text-[#D8C119] hover:bg-[#1E1C01] hover:outline font-medium py-2 px-6 md:py-3 md:px-8 font-roboto text-sm md:text-base transition duration-300 focus:outline-none focus:ring-2 focus:ring-[#D8C119] focus:ring-offset-2">
+        Book Your Visit
+      </button>
     </div>
   </div>
 </section>
 
-    <!-- Footer -->
-<footer class="bg-[#1A1A1A] text-white pt-[112px] pb-[112px] pr-[64px] pl-[64px]">
-  <div class="container mx-auto px-16">
+  <!-- Footer -->
+  <footer class="bg-[#1A1A1A] text-white py-20 md:pt-[112px] md:pb-[112px] md:pr-[64px] md:pl-[64px]">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-16">
+
       <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
         <!-- Logo & Address -->
         <div>
           <a href="/" class="mb-4 inline-block">
-            <img
-              src="/homepage-img/yellow-logo-ffoter.png"
-              alt="Braces & Roots Logo"
-              class="h-12"
-            />
+            <img src="/homepage-img/yellow-logo-ffoter.png" alt="Braces & Roots Logo" class="h-12" />
           </a>
           <div class="mt-4">
             <p class="font-semibold">Hyderabad Address:</p>
@@ -1013,34 +950,24 @@
           <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
           <ul class="space-y-2">
             <li>
-              <a href="index.html" class="hover:text-[#D8C119] transition duration-300"
-                >Home</a
-              >
+              <a href="/" class="hover:text-[#D8C119] transition duration-300">Home</a>
             </li>
             <li>
-              <a href="aboutus.html" class="hover:text-[#D8C119] transition duration-300"
-                >About Us</a
-              >
+              <a href="/aboutus.html" class="hover:text-[#D8C119] transition duration-300">About Us</a>
             </li>
             <li>
-              <a href="smile-transformation.html" class="hover:text-[#D8C119] transition duration-300"
-                >Smile Gallery</a
-              >
+              <a href="/smile-transformation.html" class="hover:text-[#D8C119] transition duration-300">Smile
+                Gallery</a>
             </li>
             <li>
-              <a href="internationalpage.html" class="hover:text-[#D8C119] transition duration-300"
-                >International Patients</a
-              >
+              <a href="/internationalpage.html" class="hover:text-[#D8C119] transition duration-300">International
+                Patients</a>
             </li>
             <li>
-              <a href="blog.html" class="hover:text-[#D8C119] transition duration-300"
-                >Blog</a
-              >
+              <a href="/blog.html" class="hover:text-[#D8C119] transition duration-300">Blog</a>
             </li>
             <li>
-              <a href="contactpage.html" class="hover:text-[#D8C119] transition duration-300"
-                >Contact</a
-              >
+              <a href="/contact.html" class="hover:text-[#D8C119] transition duration-300">Contact</a>
             </li>
           </ul>
         </div>
@@ -1050,93 +977,58 @@
           <h4 class="text-lg font-semibold mb-4">Column Two</h4>
           <ul class="space-y-2">
             <li>
-              <a href="#" class="hover:text-[#D8C119] transition duration-300"
-                >Same-Day Crowns</a
-              >
+              <a href="/" class="hover:text-[#D8C119] transition duration-300">Same-Day Crowns</a>
             </li>
             <li>
-              <a href="#" class="hover:text-[#D8C119] transition duration-300"
-                >Smile Makeovers</a
-              >
+              <a href="" class="hover:text-[#D8C119] transition duration-300">Smile Makeovers</a>
             </li>
             <li>
-              <a href="#" class="hover:text-[#D8C119] transition duration-300"
-                >Root Canal</a
-              >
+              <a href="#" class="hover:text-[#D8C119] transition duration-300">Root Canal</a>
             </li>
             <li>
-              <a href="#" class="hover:text-[#D8C119] transition duration-300"
-                >Dental Implants</a
-              >
+              <a href="#" class="hover:text-[#D8C119] transition duration-300">Dental Implants</a>
             </li>
             <li>
-              <a href="#" class="hover:text-[#D8C119] transition duration-300"
-                >Full Mouth Rehab</a
-              >
+              <a href="#" class="hover:text-[#D8C119] transition duration-300">Full Mouth Rehab</a>
             </li>
             <li>
-              <a href="#" class="hover:text-[#D8C119] transition duration-300"
-                >CBCT & Oral Cancer Screening</a
-              >
+              <a href="#" class="hover:text-[#D8C119] transition duration-300">CBCT & Oral Cancer
+                Screening</a>
             </li>
           </ul>
         </div>
       </div>
 
       <!-- Bottom Footer -->
-      <div
-        class="border-t border-gray-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center"
-      >
+      <div class="border-t border-gray-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
         <p>© 2025 Braces & Roots. All rights reserved.</p>
 
         <div class="flex gap-2 mt-4 md:mt-0">
-          <a href="#" class="hover:text-[#D8C119] transition duration-300 underline"
-            >Privacy Policy</a
-          >
-          <a href="#" class="hover:text-[#D8C119] transition duration-300 underline"
-            >Terms of Service</a
-          >
+          <a href="#" class="hover:text-[#D8C119] transition duration-300 underline">Privacy Policy</a>
+          <a href="#" class="hover:text-[#D8C119] transition duration-300 underline">Terms of Service</a>
         </div>
 
         <div class="flex gap-4 mt-4 md:mt-0 text-xl text-white">
-          <a
-            href="#"
-            aria-label="Facebook"
-            class="hover:text-[#D8C119] transition duration-300"
-          >
+          <a href="#" aria-label="Facebook" class="hover:text-[#D8C119] transition duration-300">
             <i class="fab fa-facebook-f"></i>
           </a>
-          <a
-            href="#"
-            aria-label="Instagram"
-            class="hover:text-[#D8C119] transition duration-300"
-          >
+          <a href="#" aria-label="Instagram" class="hover:text-[#D8C119] transition duration-300">
             <i class="fab fa-instagram"></i>
           </a>
-          <a
-            href="#"
-            aria-label="X"
-            class="hover:text-[#D8C119] transition duration-300"
-          >
+          <a href="#" aria-label="X" class="hover:text-[#D8C119] transition duration-300">
             <i class="fab fa-twitter"></i>
           </a>
-          <a
-            href="#"
-            aria-label="LinkedIn"
-            class="hover:text-[#D8C119] transition duration-300"
-          >
+          <a href="#" aria-label="LinkedIn" class="hover:text-[#D8C119] transition duration-300">
             <i class="fab fa-linkedin-in"></i>
           </a>
-          <a
-            href="#"
-            aria-label="YouTube"
-            class="hover:text-[#D8C119] transition duration-300"
-          >
+          <a href="#" aria-label="YouTube" class="hover:text-[#D8C119] transition duration-300">
             <i class="fab fa-youtube"></i>
           </a>
         </div>
       </div>
-  </div>
-</footer>
-  </body>
+
+    </div>
+  </footer>
+</body>
+
 </html>
